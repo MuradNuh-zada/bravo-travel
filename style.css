@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Futura, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: 1400px;
+  width: 1200px;
+}
+
+header, nav, ul, .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  gap: 15px;
+}
+
+.header-list li a {
+  font-size: 16px;
+  font-weight: 500;
+  padding-inline: 10px;
+  transition: all 0.5s ease;
+}
+.header-list li a:hover {
+  color: #f58220;
+}
+
+.logo img {
+  max-width: 160px;
+}
+
+.search-logo {
+  padding: 10px 10px 6px 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+.search-logo img {
+  width: 20px;
+  height: 20px;
+}
+
+.lang-dropdown, .call-link {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
