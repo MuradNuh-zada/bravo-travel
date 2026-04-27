@@ -3,46 +3,354 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./main.js"></script>
     <title>BRAVO Travel</title>
   </head>
   <body>
+    <div id="header-placeholder"></div>
     <header>
-      <nav>
-        <a href="#" class="logo">
-          <img src="https://bravotravel.az/img/logo-new.png" alt="" />
-        </a>
-        <ul class="header-list">
-          <li><a href="#">Haqqımızda</a></li>
-          <li><a href="#">Yeni turlar</a></li>
-          <li><a href="#">Xidmətlər</a></li>
-          <li><a href="#">Azərbaycan turları</a></li>
-          <li><a href="#">Korporativ əməkdaşlıq</a></li>
-          <li><a href="#">Əlaqə</a></li>
-        </ul>
-      </nav>
-      <div class="menu">
-        <a href="#" class="search-logo">
-          <img src="https://bravotravel.az/img/search.png" alt="search-logo" />
-        </a>
-        <div class="lang-dropdown">
-          <a href="#">
-            <img
-              src="https://bravotravel.az/img/azerbaijan.png"
-              alt="AZ-lang"
-            />AZ</a
-          >
-        </div>
-        <a href="tel:+99450 603 77 77" class="call-link">
-          <div class="number-logo">
-            <img
-              src="https://bravotravel.az/img/callcolor.png"
-              alt="call-logo"
-            />
-            <span>(+99450) 603 77 77</span>
+      <div class="container">
+        <div class="head">
+          <nav>
+            <a href="#" class="logo">
+              <img src="https://bravotravel.az/img/logo-new.png" alt="" />
+            </a>
+            <ul class="header-list">
+              <li>
+                <a href="#">
+                  <span> Haqqımızda </span>
+                </a>
+              </li>
+              <li><a href="#">Yeni turlar</a></li>
+              <li><a href="#">Xidmətlər</a></li>
+              <li><a href="#">Azərbaycan turları</a></li>
+              <li><a href="#">Korporativ əməkdaşlıq</a></li>
+              <li><a href="#">Əlaqə</a></li>
+            </ul>
+          </nav>
+          <div class="menu">
+            <a href="#" class="search-logo">
+              <img
+                src="https://bravotravel.az/img/search.png"
+                alt="search-logo"
+              />
+            </a>
+            <div class="drop-down">
+              <button href="#" class="lang-dropdown">
+                <div class="choose-lang">
+                  <img
+                    src="https://bravotravel.az/img/azerbaijan.png"
+                    alt="AZ-lang"
+                  />
+                  <span>AZ</span>
+                </div>
+                <div class="drop-lang">
+                  <a href="#" class="drop-rus">
+                    <img
+                      src="https://bravotravel.az/img/russia.png"
+                      alt="RU-lang"
+                    />
+                    <span>RU</span>
+                  </a>
+                  <a href="#" class="drop-eng">
+                    <img
+                      src="https://bravotravel.az/img/united-kingdom.png"
+                      alt="EN-lang"
+                    />
+                    <span>EN</span>
+                  </a>
+                </div>
+              </button>
+            </div>
+            <a href="tel:+99450 603 77 77" class="call-link">
+              <img
+                src="https://bravotravel.az/img/callcolor.png"
+                alt="call-logo"
+              />
+              <span>(+99450) 603 77 77</span>
+            </a>
           </div>
-        </a>
+        </div>
       </div>
     </header>
+
+    <main>
+      <section id="carousel">
+        <article id="title-carousel">
+          <h2>Istanbul</h2>
+          <p>Tarix yazan seher</p>
+        </article>
+      </section>
+      <section id="tours">
+        <div class="container">
+          <div class="bg">
+            <div class="cards-head">
+              <h2>Qaynar turlar</h2>
+              <a href="#">Bütün turlara bax</a>
+            </div>
+
+            <div class="tours-carousel">
+              <div class="cards-carousel">
+                <div class="cards-wrapper">
+                  <div class="cards">
+                    <div class="card">
+                      <img
+                        src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                        alt="Tbilisi"
+                      />
+                      <div class="card-info">
+                        <h3>Tbilisi</h3>
+                        <h4>18.09.2022 - 23.09.2022</h4>
+                        <div class="card-footer">
+                          <p>2453$ - 2345$</p>
+                          <span>Ətraflı</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img
+                        src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                        alt="Tbilisi"
+                      />
+                      <div class="card-info">
+                        <h3>Tbilisi</h3>
+                        <h4>18.09.2022 - 23.09.2022</h4>
+                        <div class="card-footer">
+                          <p>2453$ - 2345$</p>
+                          <span>Ətraflı</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img
+                        src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                        alt="Tbilisi"
+                      />
+                      <div class="card-info">
+                        <h3>Tbilisi</h3>
+                        <h4>18.09.2022 - 23.09.2022</h4>
+                        <div class="card-footer">
+                          <p>2453$ - 2345$</p>
+                          <span>Ətraflı</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img
+                        src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                        alt="Tbilisi"
+                      />
+                      <div class="card-info">
+                        <h3>Tbilisi</h3>
+                        <h4>18.09.2022 - 23.09.2022</h4>
+                        <div class="card-footer">
+                          <p>2453$ - 2345$</p>
+                          <span>Ətraflı</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="card-navbtn card-prev">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="card-navbtn card-next">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="new-tours">
+        <div class="container">
+          <div class="bg new-tours-bg">
+            <div class="cards-head">
+              <h2>Ən yeni turlar</h2>
+              <a href="#">Bütün turlara bax</a>
+            </div>
+            <div class="new-cards">
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>2453$ - 2345$</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
