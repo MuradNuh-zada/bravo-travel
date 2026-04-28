@@ -1,0 +1,635 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Futura, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+.head,
+nav,
+ul,
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  padding-block: 20px;
+  background-color: white;
+  transition: 0.5s all ease;
+  z-index: 9999;
+}
+
+header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(-90deg, #8ec7ef, #1e419b);
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  transform: rotate(180deg);
+  width: 105px;
+}
+
+.header-list li a {
+  font-size: 15px;
+  font-weight: 500;
+  padding-inline: 8px;
+  transition: 0.5s all ease;
+  color: #fff;
+}
+.header-list li a:hover {
+  color: #f58220;
+}
+
+.logo img {
+  max-width: 130px;
+}
+
+.menu {
+  gap: 12px;
+}
+
+.search-logo {
+  padding: 10px 10px 6px 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.lang-dropdown,
+.call-link,
+.drop-lang {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.drop-down {
+  position: relative;
+  padding-bottom: 15px;
+}
+.drop-down:hover .drop-lang {
+  display: block;
+}
+
+.lang-dropdown {
+  border-radius: 0.9375rem;
+  padding: 5px 7px;
+  background-color: #fff;
+  color: #fff;
+  position: relative;
+  top: 8px;
+}
+.lang-dropdown .choose-lang {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.lang-dropdown img {
+  width: 20px;
+  height: 20px;
+}
+.lang-dropdown span {
+  font-size: 12px;
+  color: #000;
+  margin-inline: 4px;
+}
+.lang-dropdown::after {
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+  color: #e2e2e2;
+}
+
+.drop-lang {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.drop-lang a:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.031372549);
+}
+.drop-lang a:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.drop-lang a {
+  display: block;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 5px;
+  transition: 0.3s all ease;
+}
+.drop-lang a:hover {
+  background-color: #e2e2e2;
+}
+.drop-lang::after {
+  position: absolute;
+  z-index: -5;
+  content: "";
+  border-bottom: 8px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  top: -5px;
+  left: 20%;
+}
+
+.call-link {
+  border-radius: 34px;
+  background-color: #fff;
+  padding: 10px 15px;
+  color: #000;
+}
+.call-link span {
+  font-size: 13px;
+}
+
+#carousel {
+  height: 100vh;
+}
+
+.bg {
+  background: url("https://bravotravel.az/img/map.png") no-repeat;
+}
+
+#tours,
+#new-tours {
+  padding-block: 40px;
+}
+
+#tours {
+  background-position: top;
+}
+
+.new-tours-bg {
+  background-size: cover;
+  background-position: left;
+}
+
+.cards-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.cards-head h2 {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.cards-head a {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.cards,
+.new-cards {
+  display: flex;
+  gap: 30px;
+  padding-block: 10px;
+}
+
+.cards {
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+.new-cards {
+  flex-wrap: wrap;
+}
+
+.card {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 250px;
+  height: 380px;
+  transition: 0.5s all ease;
+}
+.card:hover {
+  box-shadow: 0px 5px 16px 0px #d0cdcd;
+}
+.card img {
+  width: 100%;
+}
+.card .card-info {
+  background-color: #f7f7fb;
+  padding: 18px;
+}
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.card h4 {
+  margin-bottom: 16px;
+}
+.card .card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.card .card-footer p {
+  background-color: #f58220;
+  border-radius: 34px;
+  font-size: 12px;
+  padding: 4px 14px;
+  color: #fff;
+}
+.card .card-footer span {
+  color: #484848;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cards-wrapper {
+  overflow: hidden;
+}
+
+.tours-carousel {
+  padding-inline: 130px;
+}
+
+.cards-carousel {
+  position: relative;
+}
+
+.card-navbtn {
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  border: 7px solid white;
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+.card-navbtn:hover {
+  background-color: #f58220;
+}
+
+.card-prev {
+  left: -20px;
+  position: absolute;
+  top: 40%;
+}
+
+.card-next {
+  right: -20px;
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+}
+
+#country-tours {
+  background-color: #f7f7fb;
+  padding: 50px 0 100px;
+  position: relative;
+}
+#country-tours .cards-head {
+  position: relative;
+  z-index: 1;
+}
+
+.cloud-topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cloud-bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.cloud-bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2.8fr 2.8fr 2.8fr;
+  grid-auto-rows: 190px;
+  gap: 8px;
+  grid-auto-flow: dense;
+}
+
+.card-grid {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.card-grid:first-child {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+.card-grid:not(:first-child) {
+  height: 100%;
+}
+.card-grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-grid .overlay {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  transition: 0.3s all ease;
+  border-radius: 24px;
+  background-image: linear-gradient(178deg, rgba(0, 118, 129, 0), #040404);
+  opacity: 1;
+}
+.card-grid:hover .overlay {
+  opacity: 0;
+}
+.card-grid:hover h3 {
+  margin-bottom: 15px;
+}
+.card-grid:hover p {
+  margin-bottom: 5px;
+}
+
+.tour-info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 0;
+  color: #fff;
+}
+.tour-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  transition: 0.3s all ease;
+}
+.tour-info p {
+  font-size: 13px;
+  transition: 0.3s all ease;
+}
+
+.form-div {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  position: relative;
+  background-color: #1e419b;
+  padding: 30px 97px 50px;
+  border-radius: 20px;
+  width: 80%;
+  margin: 60px 0 70px;
+}
+.form-container .form-bg {
+  background-image: url("https://bravotravel.az/img/map.png");
+  background-repeat: no-repeat;
+  background-position: -165px center;
+  background-size: cover;
+  width: 100%;
+  height: 318px;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+}
+.form-container .form-head {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.form-container form {
+  position: relative;
+  z-index: 15;
+  margin-bottom: 15px;
+}
+.form-container .inputs-row {
+  display: flex;
+  justify-content: space-between;
+}
+.form-container .inputs-row input {
+  height: 50px;
+  border-radius: 25px;
+  font-size: 18px;
+}
+.form-container .inputs-row input:focus {
+  outline: none;
+}
+.form-container .inputs-row input {
+  padding: 17px;
+  width: 48%;
+}
+.form-container select {
+  height: 50px;
+  border-radius: 25px;
+  font-size: 18px;
+}
+.form-container select:focus {
+  outline: none;
+}
+.form-container select {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  transition: 0.5s all ease;
+  padding: 10px 17px;
+  background-color: #fff;
+  margin-block: 15px;
+}
+.form-container select option:first-child {
+  color: rgb(206, 206, 206);
+}
+.form-container textarea {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 17px;
+  font-size: 18px;
+  transition: 0.5s all ease;
+  outline: none;
+  resize: vertical;
+  min-height: 90px;
+  max-height: 300px;
+}
+.form-container .submit-btn {
+  background-color: #f58220;
+  color: #fff;
+  border: 1px solid #f58220;
+  border-radius: 25px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  width: 170px;
+  font-size: 18px;
+  outline: none;
+}
+.form-container .submit-btn:hover {
+  background-color: #e86b00;
+}
+.form-container .lady {
+  position: absolute;
+  top: -110px;
+  left: -175px;
+}
+.form-container .cloud-bottomleft {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+}
+.form-container .cloud-bottomright {
+  width: 500px;
+  height: 196px;
+  position: absolute;
+  bottom: -50px;
+}
+
+.info,
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  justify-content: space-between;
+}
+
+.info-item {
+  width: 33%;
+}
+.info-item:last-child {
+  justify-content: flex-end;
+}
+.info-item:nth-child(2) {
+  justify-content: center;
+}
+
+.first {
+  background-color: #1e419b;
+  padding: 50px 0;
+  position: relative;
+}
+.first .info {
+  color: #fff;
+  gap: 10px;
+}
+.first .info-item {
+  gap: 8px;
+}
+.first .imgdiv {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f58220;
+}
+.first .cloud-footer {
+  position: absolute;
+}
+.first .left {
+  left: 0;
+  bottom: 30px;
+}
+.first .right {
+  right: 0;
+  bottom: 0;
+}
+
+.second {
+  padding: 20px 0;
+}
+.second .info-item {
+  gap: 8px;
+  font-size: 15px;
+}
+.second .info-item:last-child {
+  color: #b2b2b2;
+}
+.second .social-link {
+  background-color: gray;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  transition: 0.5s all ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second .social-link:hover {
+  background-color: #f58220;
+}/*# sourceMappingURL=style.css.map */
