@@ -30,8 +30,7 @@
     cursor: pointer;
     overflow: hidden;
     border-radius: $radius-md;
-    width: $card-width;
-    height: $card-height;
+    // height: 420px;
     transition: $transition-medium;
 
     &:hover {

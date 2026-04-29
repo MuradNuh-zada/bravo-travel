@@ -10,6 +10,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <script defer src="./assets/js/main.js"></script>
     <title>BRAVO Travel</title>
@@ -84,10 +88,103 @@
 
     <main>
       <section id="carousel">
-        <article id="title-carousel">
-          <h2>Istanbul</h2>
-          <p>Tarix yazan seher</p>
-        </article>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="bg-layer"
+                src="https://bravotravel.az/img/layer.png"
+              />
+              <img class="bg-baku" src="https://bravotravel.az/img/baku.png" />
+              <img class="bg-fly" src="https://bravotravel.az/img/fly.png" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="bg-layer"
+                src="https://bravotravel.az/img/layer.png"
+              />
+              <img class="bg-baku" src="https://bravotravel.az/img/baku.png" />
+              <img class="bg-fly" src="https://bravotravel.az/img/fly.png" />
+            </div>
+          </div>
+        </div>
+        <div class="bg-images">
+          <div class="bg-img-item">
+            <img
+              class="bg-layer"
+              src="https://bravotravel.az/img/layer.png"
+              alt="Third slide"
+            />
+            <img
+              class="bg-fly"
+              src="https://bravotravel.az/img/fly.png"
+              alt="fly"
+            />
+            <img
+              class="bg-baku"
+              src="https://bravotravel.az/img/baku.png"
+              title="Dubay"
+              alt="DÜNYANIN GÜNƏŞLİ BUCAĞI"
+            />
+          </div>
+          <div class="bg-img-item">
+            <img class="bg-layer" src="https://bravotravel.az/img/layer.png" />
+            <img class="bg-baku" src="https://bravotravel.az/img/baku.png" />
+            <img class="bg-fly" src="https://bravotravel.az/img/fly.png" />
+          </div>
+          <div class="bg-img-item">
+            <img class="bg-layer" src="https://bravotravel.az/img/layer.png" />
+            <img class="bg-fly" src="https://bravotravel.az/img/fly.png" />
+            <img class="bg-baku" src="https://bravotravel.az/img/baku.png" />
+          </div>
+        </div>
+        <div class="carousel-first">
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <article id="title-carousel">
+            <h2>Istanbul</h2>
+            <p>Tarix yazan seher</p>
+          </article>
+          <article class="slider">
+            <div class="slider-wrapper">
+              <div class="slider-item">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Istanbul"
+                />
+                <div class="slider-info">
+                  <h3>Istanbul</h3>
+                  <p>Tarix yazan seher</p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Istanbul"
+                />
+                <div class="slider-info">
+                  <h3>Istanbul</h3>
+                  <p>Tarix yazan seher</p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Istanbul"
+                />
+                <div class="slider-info">
+                  <h3>Istanbul</h3>
+                  <p>Tarix yazan seher</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
       <section id="tours">
         <div class="container">
@@ -101,6 +198,62 @@
               <div class="cards-carousel">
                 <div class="cards-wrapper">
                   <div class="cards">
+                    <div class="card">
+                      <img
+                        src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                        alt="Tbilisi"
+                      />
+                      <div class="card-info">
+                        <h3>Tbilisi</h3>
+                        <h4>18.09.2022 - 23.09.2022</h4>
+                        <div class="card-footer">
+                          <p>2453$ - 2345$</p>
+                          <span>Ətraflı</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img
+                        src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                        alt="Tbilisi"
+                      />
+                      <div class="card-info">
+                        <h3>Tbilisi</h3>
+                        <h4>18.09.2022 - 23.09.2022</h4>
+                        <div class="card-footer">
+                          <p>2453$ - 2345$</p>
+                          <span>Ətraflı</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img
+                        src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                        alt="Tbilisi"
+                      />
+                      <div class="card-info">
+                        <h3>Tbilisi</h3>
+                        <h4>18.09.2022 - 23.09.2022</h4>
+                        <div class="card-footer">
+                          <p>2453$ - 2345$</p>
+                          <span>Ətraflı</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img
+                        src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                        alt="Tbilisi"
+                      />
+                      <div class="card-info">
+                        <h3>Tbilisi</h3>
+                        <h4>18.09.2022 - 23.09.2022</h4>
+                        <div class="card-footer">
+                          <p>2453$ - 2345$</p>
+                          <span>Ətraflı</span>
+                        </div>
+                      </div>
+                    </div>
                     <div class="card">
                       <img
                         src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
@@ -642,5 +795,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
 </html>

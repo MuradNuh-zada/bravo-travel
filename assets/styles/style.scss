@@ -1,5 +1,6 @@
 @import "import";
 
+// ? Header and Navigation starts here
 .head,
 nav,
 ul,
@@ -8,9 +9,11 @@ ul,
 }
 
 header {
+    position: absolute;
+    left: 0;
     padding-block: 20px;
-    background-color: white;
-    transition: $transition-medium;
+    transition: 0.5s all ease;
+    right: 0;
     z-index: $z-header;
 }
 
@@ -82,6 +85,7 @@ header.scrolled {
     align-items: center;
     gap: 5px;
 }
+
 .drop-down {
     position: relative;
     padding-bottom: 15px;
@@ -176,10 +180,9 @@ header.scrolled {
         font-size: $font-sm;
     }
 }
+// ? Header and Navigation ends here
 
-#carousel {
-    height: 100vh;
-}
+// ? Tours and New Tours starts here
 .bg {
     background: url("https://bravotravel.az/img/map.png") no-repeat;
 }
@@ -211,24 +214,34 @@ header.scrolled {
         text-decoration: underline;
     }
 }
-.cards,
-.new-cards {
+
+.cards {
     display: flex;
     gap: 30px;
     padding-block: 10px;
+    transition: transform 0.4s ease;
 }
-.cards {
-    justify-content: center;
-    width: 100vw;
-    position: relative;
-    transform: translateX(-50%);
+
+#tours {
+    .card {
+        flex: 0 0 calc((100% - 60px) / 3);
+    }
 }
+
 .new-cards {
+    display: flex;
+    gap: 15px;
+    padding-block: 10px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    .card {
+        width: 260px;
+    }
 }
 
 .card {
     @include card;
+
     img {
         width: 100%;
     }
@@ -300,7 +313,9 @@ header.scrolled {
     z-index: $z-overlay;
     top: 40%;
 }
+// ? Tours and New Tours ends here
 
+// ? Country Tours starts here
 #country-tours {
     background-color: $light-gray;
     padding: 50px 0 100px;
@@ -567,3 +582,113 @@ header.scrolled {
         }
     }
 }
+
+// ? Carousel starts here
+
+@keyframes fly {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#carousel {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .carousel-first {
+        display: flex;
+        justify-content: space-between;
+    }
+    .bg-img-item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-images {
+        display: flex;
+    }
+    .bg-layer {
+        position: absolute;
+        width: 100%;
+        z-index: -5;
+    }
+    .bg-baku {
+        position: absolute;
+        position: absolute;
+        top: 350px;
+        left: 0;
+        transform: translateY(-45%);
+        width: 45%;
+        z-index: -3;
+    }
+    .bg-fly {
+        position: absolute;
+        top: 150px;
+        transform: translateY(-20%);
+        left: 0;
+        z-index: -1;
+        width: auto;
+        animation: fly 4s ease-in-out infinite;
+    }
+}
+
+// ? Carousel ends here
+
+// .swiper {
+//     width: 100%;
+//     height: 100%;
+// }
+
+// .swiper-slide {
+//     text-align: center;
+//     font-size: 18px;
+//     background: #444;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .swiper-slide img {
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
+
+// .autoplay-progress {
+//     position: absolute;
+//     right: 16px;
+//     bottom: 16px;
+//     z-index: 10;
+//     width: 48px;
+//     height: 48px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-weight: bold;
+//     color: var(--swiper-theme-color);
+// }
+
+// .autoplay-progress svg {
+//     --progress: 0;
+//     position: absolute;
+//     left: 0;
+//     top: 0px;
+//     z-index: 10;
+//     width: 100%;
+//     height: 100%;
+//     stroke-width: 4px;
+//     stroke: var(--swiper-theme-color);
+//     fill: none;
+//     stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+//     stroke-dasharray: 125.6;
+//     transform: rotate(-90deg);
+// }

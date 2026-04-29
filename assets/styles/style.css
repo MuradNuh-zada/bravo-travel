@@ -56,9 +56,11 @@ ul,
 }
 
 header {
+  position: absolute;
+  left: 0;
   padding-block: 20px;
-  background-color: white;
   transition: 0.5s all ease;
+  right: 0;
   z-index: 9999;
 }
 
@@ -200,10 +202,6 @@ header.scrolled {
   font-size: 13px;
 }
 
-#carousel {
-  height: 100vh;
-}
-
 .bg {
   background: url("https://bravotravel.az/img/map.png") no-repeat;
 }
@@ -238,30 +236,32 @@ header.scrolled {
   text-decoration: underline;
 }
 
-.cards,
-.new-cards {
+.cards {
   display: flex;
   gap: 30px;
   padding-block: 10px;
+  transition: transform 0.4s ease;
 }
 
-.cards {
-  justify-content: center;
-  width: 100vw;
-  position: relative;
-  transform: translateX(-50%);
+#tours .card {
+  flex: 0 0 calc((100% - 60px) / 3);
 }
 
 .new-cards {
+  display: flex;
+  gap: 15px;
+  padding-block: 10px;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+.new-cards .card {
+  width: 260px;
 }
 
 .card {
   cursor: pointer;
   overflow: hidden;
   border-radius: 20px;
-  width: 250px;
-  height: 380px;
   transition: 0.5s all ease;
 }
 .card:hover {
@@ -632,4 +632,58 @@ header.scrolled {
 }
 .second .social-link:hover {
   background-color: #f58220;
+}
+
+@keyframes fly {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#carousel {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#carousel .carousel-first {
+  display: flex;
+  justify-content: space-between;
+}
+#carousel .bg-img-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#carousel .bg-images {
+  display: flex;
+}
+#carousel .bg-layer {
+  position: absolute;
+  width: 100%;
+  z-index: -5;
+}
+#carousel .bg-baku {
+  position: absolute;
+  position: absolute;
+  top: 350px;
+  left: 0;
+  transform: translateY(-45%);
+  width: 45%;
+  z-index: -3;
+}
+#carousel .bg-fly {
+  position: absolute;
+  top: 150px;
+  transform: translateY(-20%);
+  left: 0;
+  z-index: -1;
+  width: auto;
+  animation: fly 4s ease-in-out infinite;
 }/*# sourceMappingURL=style.css.map */
