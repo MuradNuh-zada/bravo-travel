@@ -2,8 +2,8 @@
 
 // ? Header and Navigation starts here
 .head,
-nav,
 ul,
+nav,
 .menu {
     @include flex(center, space-between);
 }
@@ -11,10 +11,19 @@ ul,
 header {
     position: absolute;
     left: 0;
-    padding-block: 20px;
+    padding-block: 40px;
     transition: 0.5s all ease;
     right: 0;
     z-index: $z-header;
+    .cloud {
+        position: absolute;
+        top: 0;
+        transform: rotate(180deg);
+        width: 105px;
+    }
+    nav {
+        width: 72%;
+    }
 }
 
 header.scrolled {
@@ -22,22 +31,24 @@ header.scrolled {
     top: 0;
     left: 0;
     right: 0;
+    padding-block: 20px;
     background-image: $header-gradient;
-}
-
-.cloud {
-    position: absolute;
-    top: 0;
-    transform: rotate(180deg);
-    width: 105px;
+    .logo {
+        img {
+            width: 130px;
+        }
+    }
+    nav {
+        justify-content: normal;
+    }
 }
 
 .header-list {
     li {
         a {
-            font-size: $font-md;
+            font-size: 16px;
             font-weight: 500;
-            padding-inline: 8px;
+            padding-inline: 10px;
             transition: $transition-medium;
             color: $white;
             &:hover {
@@ -64,7 +75,7 @@ header.scrolled {
 
 .logo {
     img {
-        max-width: 130px;
+        max-width: 160px;
     }
 }
 
@@ -73,7 +84,8 @@ header.scrolled {
 }
 
 .search-logo {
-    padding: 10px 10px 6px 10px;
+    cursor: pointer;
+    padding: 10px 10px 5px 10px;
     border-radius: $radius-full;
     background-color: $white;
 }
@@ -83,9 +95,11 @@ header.scrolled {
 .drop-lang {
     display: flex;
     align-items: center;
+}
+.call-link,
+.drop-lang {
     gap: 5px;
 }
-
 .drop-down {
     position: relative;
     padding-bottom: 15px;
@@ -102,6 +116,7 @@ header.scrolled {
     color: $white;
     position: relative;
     top: 8px;
+    font-weight: 600;
 
     .choose-lang {
         font-weight: 600;
@@ -153,6 +168,7 @@ header.scrolled {
         gap: 8px;
         padding: 5px;
         transition: $transition-fast;
+        align-items: center;
         &:hover {
             background-color: $gray;
         }
@@ -244,6 +260,8 @@ header.scrolled {
 
     img {
         width: 100%;
+        height: 210px;
+        object-fit: cover;
     }
     .card-info {
         background-color: $light-gray;
@@ -255,12 +273,13 @@ header.scrolled {
         margin-bottom: 7px;
     }
     h4 {
-        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 600;
     }
     .card-footer {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-block: 16px 30px;
         p {
             background-color: $secondary-color;
             border-radius: $radius-xl;
@@ -302,13 +321,13 @@ header.scrolled {
 }
 
 .card-prev {
-    left: -20px;
+    left: -40px;
     position: absolute;
     top: 40%;
 }
 
 .card-next {
-    right: -20px;
+    right: -40px;
     position: absolute;
     z-index: $z-overlay;
     top: 40%;
@@ -410,6 +429,8 @@ header.scrolled {
 .form-div {
     display: flex;
     justify-content: center;
+    position: relative;
+    left: 70px;
 }
 .form-container {
     position: relative;
@@ -622,24 +643,66 @@ header.scrolled {
     }
     .bg-baku {
         position: absolute;
-        position: absolute;
-        top: 350px;
-        left: 0;
-        transform: translateY(-45%);
+        top: 25%;
         width: 45%;
         z-index: -3;
     }
     .bg-fly {
         position: absolute;
-        top: 150px;
-        transform: translateY(-20%);
-        left: 0;
+        top: 16%;
         z-index: -1;
         width: auto;
-        animation: fly 4s ease-in-out infinite;
+    }
+    .bg-fly.flying {
+        animation: fly 4s ease-in-out;
     }
 }
 
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    .cloud {
+        position: absolute;
+    }
+    .cloud-first {
+        top: 14%;
+        left: 8%;
+        z-index: 6;
+    }
+    .cloud-second {
+        left: 37%;
+        top: 100px;
+        top: 15%;
+        z-index: 2;
+    }
+
+    .cloud-third {
+        left: auto;
+        right: -2%;
+        top: 16%;
+        img {
+            width: 490px;
+        }
+    }
+
+    .cloud-fourth {
+        top: 330px;
+        top: 50%;
+    }
+
+    .cloud-fifth {
+        left: 42%;
+        top: 330px;
+    }
+    .cloud-sixth {
+        top: 352px;
+        right: -150px;
+    }
+}
 // ? Carousel ends here
 
 // .swiper {

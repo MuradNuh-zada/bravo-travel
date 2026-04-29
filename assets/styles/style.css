@@ -4,8 +4,38 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaNewBold-Reg.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaNewDemi-Reg.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaNewExtraBold-Reg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaNewLight-Reg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaNewMedium-Reg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
 body {
-  font-family: Futura, sans-serif;
+  font-family: "Futura", sans-serif;
 }
 
 a {
@@ -47,8 +77,8 @@ h6 {
 }
 
 .head,
-nav,
 ul,
+nav,
 .menu {
   display: flex;
   align-items: center;
@@ -58,10 +88,19 @@ ul,
 header {
   position: absolute;
   left: 0;
-  padding-block: 20px;
+  padding-block: 40px;
   transition: 0.5s all ease;
   right: 0;
   z-index: 9999;
+}
+header .cloud {
+  position: absolute;
+  top: 0;
+  transform: rotate(180deg);
+  width: 105px;
+}
+header nav {
+  width: 72%;
 }
 
 header.scrolled {
@@ -69,20 +108,20 @@ header.scrolled {
   top: 0;
   left: 0;
   right: 0;
+  padding-block: 20px;
   background-image: linear-gradient(-90deg, #8ec7ef, #1e419b);
 }
-
-.cloud {
-  position: absolute;
-  top: 0;
-  transform: rotate(180deg);
-  width: 105px;
+header.scrolled .logo img {
+  width: 130px;
+}
+header.scrolled nav {
+  justify-content: normal;
 }
 
 .header-list li a {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  padding-inline: 8px;
+  padding-inline: 10px;
   transition: 0.5s all ease;
   color: #fff;
 }
@@ -91,7 +130,7 @@ header.scrolled {
 }
 
 .logo img {
-  max-width: 130px;
+  max-width: 160px;
 }
 
 .menu {
@@ -99,7 +138,8 @@ header.scrolled {
 }
 
 .search-logo {
-  padding: 10px 10px 6px 10px;
+  cursor: pointer;
+  padding: 10px 10px 5px 10px;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -109,6 +149,10 @@ header.scrolled {
 .drop-lang {
   display: flex;
   align-items: center;
+}
+
+.call-link,
+.drop-lang {
   gap: 5px;
 }
 
@@ -127,6 +171,7 @@ header.scrolled {
   color: #fff;
   position: relative;
   top: 8px;
+  font-weight: 600;
 }
 .lang-dropdown .choose-lang {
   font-weight: 600;
@@ -177,6 +222,7 @@ header.scrolled {
   gap: 8px;
   padding: 5px;
   transition: 0.3s all ease;
+  align-items: center;
 }
 .drop-lang a:hover {
   background-color: #e2e2e2;
@@ -269,6 +315,9 @@ header.scrolled {
 }
 .card img {
   width: 100%;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card .card-info {
   background-color: #f7f7fb;
@@ -280,12 +329,13 @@ header.scrolled {
   margin-bottom: 7px;
 }
 .card h4 {
-  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
 }
 .card .card-footer {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-block: 16px 30px;
 }
 .card .card-footer p {
   background-color: #f58220;
@@ -327,13 +377,13 @@ header.scrolled {
 }
 
 .card-prev {
-  left: -20px;
+  left: -40px;
   position: absolute;
   top: 40%;
 }
 
 .card-next {
-  right: -20px;
+  right: -40px;
   position: absolute;
   z-index: 999;
   top: 40%;
@@ -437,6 +487,8 @@ header.scrolled {
 .form-div {
   display: flex;
   justify-content: center;
+  position: relative;
+  left: 70px;
 }
 
 .form-container {
@@ -671,19 +723,59 @@ header.scrolled {
 }
 #carousel .bg-baku {
   position: absolute;
-  position: absolute;
-  top: 350px;
-  left: 0;
-  transform: translateY(-45%);
+  top: 25%;
   width: 45%;
   z-index: -3;
 }
 #carousel .bg-fly {
   position: absolute;
-  top: 150px;
-  transform: translateY(-20%);
-  left: 0;
+  top: 16%;
   z-index: -1;
   width: auto;
-  animation: fly 4s ease-in-out infinite;
+}
+#carousel .bg-fly.flying {
+  animation: fly 4s ease-in-out;
+}
+
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.clouds .cloud {
+  position: absolute;
+}
+.clouds .cloud-first {
+  top: 14%;
+  left: 8%;
+  z-index: 6;
+}
+.clouds .cloud-second {
+  left: 37%;
+  top: 100px;
+  top: 15%;
+  z-index: 2;
+}
+.clouds .cloud-third {
+  left: auto;
+  right: -2%;
+  top: 16%;
+}
+.clouds .cloud-third img {
+  width: 490px;
+}
+.clouds .cloud-fourth {
+  top: 330px;
+  top: 50%;
+}
+.clouds .cloud-fifth {
+  left: 42%;
+  top: 330px;
+}
+.clouds .cloud-sixth {
+  top: 352px;
+  right: -150px;
 }/*# sourceMappingURL=style.css.map */

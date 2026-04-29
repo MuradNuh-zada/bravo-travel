@@ -1,12 +1,3 @@
-const swiper = new Swiper(".mySwiper", {
-  loop: true,
-  autoplay: {
-    delay: 3500, 
-    disableOnInteraction: false,
-  },
-  allowTouchMove: false, 
-});
-
 // const progressCircle = document.querySelector(".autoplay-progress svg");
 // const progressContent = document.querySelector(".autoplay-progress span");
 // var swiper = new Swiper(".mySwiper", {
@@ -31,6 +22,53 @@ const swiper = new Swiper(".mySwiper", {
 //     },
 //   },
 // });
+
+(function animationSlider() {
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    allowTouchMove: false,
+
+    on: {
+      init: function () {
+        startPlane();
+      },
+
+      slideChangeTransitionStart: function () {
+        startPlane();
+      },
+    },
+  });
+
+  function startPlane() {
+    const activeSlide = document.querySelector(".swiper-slide-active .bg-fly");
+
+    if (!activeSlide) return;
+
+    activeSlide.classList.remove("flying");
+
+    requestAnimationFrame(() => {
+      activeSlide.classList.add("flying");
+    });
+  }
+})();
+
+// animationSlider();
+
+// const follower = document.querySelector("#follower");
+const element = document.querySelector("#carousel");
+const rect = element.getBoundingClientRect();
+console.log(rect.width / 2);
+console.log(rect.width);
+
+document.addEventListener("mousemove", (e) => {
+  // console.log(e.clientX, e.clientY);
+  // follower.style.left = e.pageX + "px";
+  // follower.style.top = e.pageY + "px";
+});
 
 const header = document.querySelector("header");
 const placeholder = document.querySelector("#header-placeholder");
