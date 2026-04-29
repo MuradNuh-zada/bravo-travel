@@ -1,28 +1,10 @@
-// const progressCircle = document.querySelector(".autoplay-progress svg");
-// const progressContent = document.querySelector(".autoplay-progress span");
-// var swiper = new Swiper(".mySwiper", {
-//   spaceBetween: 30,
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   on: {
-//     autoplayTimeLeft(s, time, progress) {
-//       progressCircle.style.setProperty("--progress", 1 - progress);
-//       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-//     },
-//   },
-// });
+const body = document.body,
+  header = document.querySelector("header"),
+  placeholder = document.querySelector("#header-placeholder"),
+  tours = document.querySelector("#tours"),
+  logo = document.querySelector(".logo img");
 
+// ! Animation for slider
 (function animationSlider() {
   const swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -56,28 +38,25 @@
   }
 })();
 
-// animationSlider();
+// ! Parallax effect for clouds
+body.addEventListener("mousemove", (e) => {
+  const moveX = e.clientX - window.innerWidth / 2;
+  const moveY = e.clientY - window.innerHeight / 2;
+  const clouds = document.querySelectorAll(".clouds .cloud");
 
-// const follower = document.querySelector("#follower");
-const element = document.querySelector("#carousel");
-const rect = element.getBoundingClientRect();
-console.log(rect.width / 2);
-console.log(rect.width);
-
-document.addEventListener("mousemove", (e) => {
-  // console.log(e.clientX, e.clientY);
-  // follower.style.left = e.pageX + "px";
-  // follower.style.top = e.pageY + "px";
+  const speed = 0.03;
+  const x = -(moveX * speed);
+  const y = -(moveY * speed);
+  clouds.forEach((cloud) => {
+    cloud.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  });
 });
 
-const header = document.querySelector("header");
-const placeholder = document.querySelector("#header-placeholder");
-const tours = document.querySelector("#tours");
-const logo = document.querySelector(".logo img");
+// ! Scroll effect for header
 
-let headerHeight = header.offsetHeight;
-let isScrolled = false;
-let ticking = false;
+let headerHeight = header.offsetHeight,
+  isScrolled = false,
+  ticking = false;
 
 window.addEventListener("scroll", () => {
   if (!ticking) {
@@ -114,3 +93,15 @@ function handleScroll() {
     placeholder.style.height = "0px";
   }
 }
+
+// ! Cards carousel
+const swiper = new Swiper(".cards-carousel", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+
+  navigation: {
+    nextEl: ".card-next",
+    prevEl: ".card-prev",
+  },
+});

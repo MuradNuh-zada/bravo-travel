@@ -283,8 +283,7 @@ header.scrolled nav {
 }
 
 .cards {
-  display: flex;
-  gap: 30px;
+  transition-timing-function: linear;
   padding-block: 10px;
   transition: transform 0.4s ease;
 }
@@ -355,11 +354,13 @@ header.scrolled nav {
 }
 
 .tours-carousel {
+  position: relative;
   padding-inline: 130px;
 }
 
 .cards-carousel {
   position: relative;
+  overflow: hidden;
 }
 
 .card-navbtn {
@@ -377,16 +378,26 @@ header.scrolled nav {
 }
 
 .card-prev {
-  left: -40px;
+  left: 8%;
   position: absolute;
   top: 40%;
 }
 
 .card-next {
-  right: -40px;
+  right: 8%;
   position: absolute;
   z-index: 999;
   top: 40%;
+}
+
+.card-prev,
+.card-next {
+  z-index: 10;
+}
+.card-prev.swiper-button-disabled,
+.card-next.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 #country-tours {
@@ -747,6 +758,8 @@ header.scrolled nav {
 }
 .clouds .cloud {
   position: absolute;
+  will-change: transform;
+  pointer-events: none;
 }
 .clouds .cloud-first {
   top: 14%;

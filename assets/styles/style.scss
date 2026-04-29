@@ -232,8 +232,7 @@ header.scrolled {
 }
 
 .cards {
-    display: flex;
-    gap: 30px;
+    transition-timing-function: linear;
     padding-block: 10px;
     transition: transform 0.4s ease;
 }
@@ -299,11 +298,13 @@ header.scrolled {
     overflow: hidden;
 }
 .tours-carousel {
+    position: relative;
     padding-inline: 130px;
 }
 
 .cards-carousel {
     position: relative;
+    overflow: hidden;
 }
 
 .card-navbtn {
@@ -321,16 +322,26 @@ header.scrolled {
 }
 
 .card-prev {
-    left: -40px;
+    left: 8%;
     position: absolute;
     top: 40%;
 }
 
 .card-next {
-    right: -40px;
+    right: 8%;
     position: absolute;
     z-index: $z-overlay;
     top: 40%;
+}
+
+.card-prev,
+.card-next {
+    z-index: 10;
+    // Swiper disabled olanda düymənin görünüşü:
+    &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
 }
 // ? Tours and New Tours ends here
 
@@ -667,6 +678,8 @@ header.scrolled {
     z-index: 1;
     .cloud {
         position: absolute;
+        will-change: transform;
+        pointer-events: none;
     }
     .cloud-first {
         top: 14%;
