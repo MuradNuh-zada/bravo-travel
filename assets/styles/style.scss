@@ -12,7 +12,6 @@ header {
     position: absolute;
     left: 0;
     padding-block: 40px;
-    transition: 0.5s all ease;
     right: 0;
     z-index: $z-header;
     .cloud {
@@ -536,23 +535,25 @@ header.scrolled {
     }
 }
 
-.info,
-.info-item {
-    display: flex;
-    align-items: center;
-}
-
-.info {
-    justify-content: space-between;
-}
-
-.info-item {
-    width: 33%;
-    &:last-child {
-        justify-content: flex-end;
+footer {
+    .info,
+    .info-item {
+        display: flex;
+        align-items: center;
     }
-    &:nth-child(2) {
-        justify-content: center;
+
+    .info {
+        justify-content: space-between;
+    }
+
+    .info-item {
+        width: 33%;
+        &:last-child {
+            justify-content: flex-end;
+        }
+        &:nth-child(2) {
+            justify-content: center;
+        }
     }
 }
 
@@ -629,6 +630,35 @@ header.scrolled {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    .bg-img-item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-images {
+        display: flex;
+    }
+    .bg-layer {
+        position: absolute;
+        width: 100%;
+        z-index: -5;
+    }
+    .bg-baku {
+        position: absolute;
+        top: 25%;
+        width: 45%;
+        z-index: -3;
+    }
+    .bg-fly {
+        position: absolute;
+        top: 16%;
+        z-index: -1;
+        width: auto;
+    }
+    .bg-fly.flying {
+        animation: fly 4s ease-in-out;
+    }
+
     .swiper-content-my {
         width: 100%;
         height: 100%;
@@ -651,15 +681,16 @@ header.scrolled {
 
         #hero-title-box {
             width: 40%;
-            text-transform: uppercase;
-            h2 {
+            .hero-title-text {
+                text-transform: uppercase;
                 font-size: 70px;
                 color: #f58220;
                 font-weight: bold;
                 line-height: 1;
             }
-            p {
+            .hero-desc-text {
                 font-size: 22px;
+                text-transform: uppercase;
                 color: #000;
             }
         }
@@ -670,12 +701,12 @@ header.scrolled {
             padding: 45px;
             position: relative;
             overflow: hidden;
-            .hero-item-card {
-                &.swiper-slide-active {
-                    height: 370px;
-                    .hero-overlay {
-                        display: none;
-                    }
+        }
+        .hero-item-card {
+            &.swiper-slide-active {
+                height: 370px;
+                .hero-overlay {
+                    display: none;
                 }
             }
         }
@@ -788,33 +819,35 @@ header.scrolled {
         }
     }
 
-    .bg-img-item {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-    .bg-images {
+    #infos {
         display: flex;
-    }
-    .bg-layer {
-        position: absolute;
-        width: 100%;
-        z-index: -5;
-    }
-    .bg-baku {
-        position: absolute;
-        top: 25%;
-        width: 45%;
-        z-index: -3;
-    }
-    .bg-fly {
-        position: absolute;
-        top: 16%;
-        z-index: -1;
-        width: auto;
-    }
-    .bg-fly.flying {
-        animation: fly 4s ease-in-out;
+        z-index: 45;
+        gap: 15px;
+        margin-top: 90px;
+        .info {
+            width: 85px;
+            height: 85px;
+            padding: 0 5px;
+            border-radius: 12px;
+            border: 1px solid #1e419b;
+            color: #1e419b;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: 300ms all ease;
+            &:hover {
+                background-color: #1e419b;
+                color: #fff;
+            }
+        }
+        i {
+            font-size: 23px;
+        }
     }
 }
 
@@ -866,3 +899,19 @@ header.scrolled {
     }
 }
 // ? Carousel ends here
+
+.chat-icon {
+    position: fixed;
+    background-color: #f58220;
+    width: 60px;
+    height: 60px;
+    z-index: 9000;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #fff;
+    cursor: pointer;
+}

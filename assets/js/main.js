@@ -179,8 +179,8 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
       const title = activeSlide.getAttribute("data-title");
       const desc = activeSlide.getAttribute("data-desc");
 
-      const titleEl = document.getElementById("hero-title-text");
-      const descEl = document.getElementById("hero-desc-text");
+      const titleEl = document.querySelector(".hero-title-text");
+      const descEl = document.querySelector(".hero-desc-text");
 
       if (titleEl && title) titleEl.innerText = title;
       if (descEl && desc) descEl.innerText = desc;
