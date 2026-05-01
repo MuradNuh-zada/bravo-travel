@@ -117,15 +117,64 @@ header.scrolled nav {
   justify-content: normal;
 }
 
+@keyframes bounceIn {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  70% {
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes bounceOut {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  70% {
+    transform: scaleX(0.1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
 .header-list li a {
   font-size: 16px;
   font-weight: 500;
   padding-inline: 10px;
-  transition: 0.5s all ease;
   color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 .header-list li a:hover {
   color: #f58220;
+}
+.header-list li a span {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+.header-list li a span:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: #f58220;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: bounceOut 0.6s ease forwards;
+}
+.header-list li a span:hover:after {
+  animation: bounceIn 0.6s ease forwards;
 }
 
 .logo img {
@@ -277,8 +326,25 @@ header.scrolled nav {
   line-height: 1.2;
 }
 .cards-head a {
+  display: block;
   font-size: 15px;
-  text-decoration: underline;
+  position: relative;
+}
+.cards-head a:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  display: block;
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transform-origin: 0 50%;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+.cards-head a:hover:after {
+  width: 0%;
 }
 
 .cards {
@@ -646,6 +712,25 @@ footer .info-item:nth-child(2) {
 .first .info-item {
   gap: 8px;
 }
+.first .info-item a {
+  position: relative;
+}
+.first .info-item a:after {
+  content: "";
+  height: 1px;
+  width: 0;
+  position: absolute;
+  background-color: #fff;
+  display: block;
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transform-origin: 0 50%;
+  transition-property: all;
+  transition-duration: 0.5s;
+  bottom: 0;
+}
+.first .info-item a:hover:after {
+  width: 100%;
+}
 .first .imgdiv {
   width: 50px;
   height: 50px;
@@ -780,7 +865,7 @@ footer .info-item:nth-child(2) {
   height: 370px;
 }
 #carousel .hero-carousel-main .hero-item-card.swiper-slide-active .hero-overlay {
-  display: none;
+  display: none !important;
 }
 #carousel .hero-carousel-main .hero-wrapper-box {
   align-items: center;

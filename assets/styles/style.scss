@@ -42,32 +42,73 @@ header.scrolled {
     }
 }
 
+@keyframes bounceIn {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    70% {
+        transform: scaleX(0.9);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bounceOut {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(0);
+    }
+    70% {
+        transform: scaleX(0.1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
 .header-list {
     li {
         a {
             font-size: 16px;
             font-weight: 500;
             padding-inline: 10px;
-            transition: $transition-medium;
             color: $white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
             &:hover {
                 color: $secondary-color;
             }
-            // span {
-            //     position: relative;
-            //     &:after {
-            //         content: "";
-            //         height: 1px;
-            //         width: 0;
-            //         position: absolute;
-            //         background-color: $secondary-color;
-            //         display: block;
-            //         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-            //         transform-origin: 0 50%;
-            //         transition: $transition-medium;
-            //         bottom: 0;
-            //     }
-            // }
+
+            span {
+                position: relative;
+                display: inline-block;
+                padding-bottom: 2px;
+                &:after {
+                    content: "";
+                    height: 2px;
+                    width: 100%;
+                    position: absolute;
+                    background-color: $secondary-color;
+                    bottom: 0;
+                    left: 0;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    animation: bounceOut 0.6s ease forwards;
+                }
+
+                &:hover {
+                    &:after {
+                        animation: bounceIn 0.6s ease forwards;
+                    }
+                }
+            }
         }
     }
 }
@@ -225,8 +266,27 @@ header.scrolled {
         line-height: 1.2;
     }
     a {
+        display: block;
         font-size: $font-md;
-        text-decoration: underline;
+        position: relative;
+        &:after {
+            display: block;
+            content: "";
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            background-color: black;
+            display: block;
+            transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+            transform-origin: 0 50%;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        &:hover {
+            &:after {
+                width: 0%;
+            }
+        }
     }
 }
 
@@ -567,6 +627,28 @@ footer {
     }
     .info-item {
         gap: 8px;
+        a {
+            position: relative;
+            &:after {
+                content: "";
+                height: 1px;
+                width: 0;
+                position: absolute;
+                background-color: #fff;
+                display: block;
+                transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+                transform-origin: 0 50%;
+                transition-property: all;
+                transition-duration: 0.5s;
+                bottom: 0;
+            }
+
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
     }
 
     .imgdiv {
@@ -706,7 +788,7 @@ footer {
             &.swiper-slide-active {
                 height: 370px;
                 .hero-overlay {
-                    display: none;
+                    display: none !important;
                 }
             }
         }
