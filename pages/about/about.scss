@@ -1,0 +1,113 @@
+@import "../../assets/styles/reset";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Futura";
+    src: url("../../assets/fonts/FuturaNewBold-Reg.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("../../assets/fonts/FuturaNewExtraBold-Reg.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("../../assets/fonts/FuturaNewMedium-Reg.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+body {
+    font-family: "Futura", sans-serif;
+}
+
+#about-comp {
+    padding: 20px 0;
+    background-color: #eaf0f5;
+}
+
+.about-comp-container {
+    display: flex;
+    align-items: center;
+    ul {
+        padding-left: 30px;
+        width: 50%;
+
+        li {
+            position: relative;
+            padding-left: 15px;
+            color: #2d2d2d;
+            font-size: 1.125rem;
+            line-height: 29px;
+            margin-bottom: 15px;
+            &:after {
+                position: absolute;
+                content: "";
+                width: 8px;
+                height: 8px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                background-color: #8ec7ef;
+                top: 11px;
+                left: 0;
+            }
+        }
+    }
+    .about-img {
+        width: 50%;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+        &:after {
+            content: "";
+            display: inline-block;
+            background-color: #8ec7ef;
+            -webkit-box-shadow: 0 4px 10px 0 rgba(142, 199, 239, 0.5);
+            -moz-box-shadow: 0 4px 10px 0 rgba(142, 199, 239, 0.5);
+            box-shadow: 0 4px 10px 0 rgba(142, 199, 239, 0.5);
+            width: 90px;
+            height: 6px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+    }
+}
+
+#about-info {
+    padding: 50px 0;
+    .about-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    p {
+        margin-block: 25px;
+    }
+    b {
+        font-weight: 600;
+    }
+    h3 {
+        margin-left: 16px;
+        color: #f1823a;
+        font-weight: 500;
+        font-size: 28px;
+    }
+    h4 {
+        font-weight: 500;
+        color: #f1833b;
+        margin-block: 25px;
+        font-size: 1.5rem;
+    }
+}
