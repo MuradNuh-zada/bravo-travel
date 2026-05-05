@@ -308,8 +308,9 @@ header nav {
 }
 
 #contact {
-  transition: all 0.1s;
+  transition: background 0.3s;
   cursor: pointer;
+  border-bottom: 1px solid transparent;
 }
 #contact:hover {
   background-color: #f7f7f8;
@@ -417,29 +418,29 @@ header nav {
   width: 50%;
 }
 
-.textarea-box,
-.input-box {
+.input-box,
+.textarea-box {
   position: relative;
   margin-top: 30px;
 }
-.textarea-box label,
-.input-box label {
+.input-box label,
+.textarea-box label {
   position: absolute;
   left: 14px;
-  width: 100%;
   top: 15px;
   transition: 0.3s;
-  z-index: -1;
-  letter-spacing: 0.5px;
   font-size: 14px;
+  color: #777;
+  pointer-events: none;
+  background: #fff;
+  padding: 0 5px;
 }
-.textarea-box:focus-within label,
-.input-box:focus-within label {
+.input-box.active label,
+.textarea-box.active label {
   top: -18px;
   left: 0;
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
-  transition: 0.3s;
 }
 
 .focus-bg {

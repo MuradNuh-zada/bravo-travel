@@ -1,17 +1,32 @@
-const inputs = document.querySelectorAll("form input, form textarea");
+const fields = document.querySelectorAll(".input-box, .textarea-box");
 
-if (inputs) {
-  for (const input of inputs) {
-    const original = input.placeholder;
-    input.addEventListener("focus", () => {
-      input.placeholder = "";
-    });
-
-    input.addEventListener("blur", () => {
-      input.placeholder = original;
-    });
+fields.forEach((field) => {
+  const input = field.querySelector("input, textarea");
+  const original = input.placeholder;
+  if (input.value.trim() !== "") {
+    field.classList.add("active");
   }
-}
+
+  input.addEventListener("focus", () => {
+    field.classList.add("active");
+    input.placeholder = "";
+  });
+
+  input.addEventListener("blur", () => {
+    if (input.value.trim() === "") {
+      field.classList.remove("active");
+      input.placeholder = original;
+    }
+  });
+
+  input.addEventListener("input", () => {
+    if (input.value.trim() !== "") {
+      field.classList.add("active");
+    } else {
+      field.classList.remove("active");
+    }
+  });
+});
 
 ymaps.ready(init);
 
