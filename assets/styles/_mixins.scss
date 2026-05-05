@@ -1,0 +1,57 @@
+@import "variables";
+
+@mixin flex($align: center, $justify: flex-start, $gap: null) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+
+    @if $gap != null {
+        gap: $gap;
+    }
+}
+
+@mixin button($bg, $color: $white) {
+    background-color: $bg;
+    color: $color;
+    border: 1px solid $bg;
+    border-radius: $radius-lg;
+    height: $input-height;
+    cursor: pointer;
+    transition: $transition-fast;
+    width: 170px;
+    font-size: $font-lg;
+    outline: none;
+    &:hover {
+        background-color: #e86b00;
+    }
+}
+
+@mixin card {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: $radius-md;
+    transition: $transition-medium;
+
+    &:hover {
+        box-shadow: $card-shadow;
+    }
+}
+
+@mixin input {
+    height: $input-height;
+    border-radius: $radius-lg;
+    font-size: $font-lg;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: $radius-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,11 +1,808 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script defer src="./assets/js/main.js"></script>
     <title>BRAVO Travel</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <header>
+      <div class="container">
+        <div class="head">
+          <nav>
+            <a href="#" class="logo">
+              <img src="https://bravotravel.az/img/logo-new.png" alt="" />
+            </a>
+            <ul class="header-list">
+              <li>
+                <a href="./pages/about">
+                  <span> Haqqımızda </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Yeni turlar</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Xidmətlər</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Azərbaycan turları</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Korporativ əməkdaşlıq</span>
+                </a>
+              </li>
+              <li>
+                <a href="./pages/contact/">
+                  <span>Əlaqə</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu">
+            <button class="search-logo">
+              <img
+                src="https://bravotravel.az/img/search.png"
+                alt="search-logo"
+              />
+            </button>
+            <div class="drop-down">
+              <button href="#" class="lang-dropdown">
+                <div class="choose-lang">
+                  <img
+                    src="https://bravotravel.az/img/azerbaijan.png"
+                    alt="AZ-lang"
+                  />
+                  <span>AZ</span>
+                </div>
+                <div class="drop-lang">
+                  <a href="#" class="drop-rus">
+                    <img
+                      src="https://bravotravel.az/img/russia.png"
+                      alt="RU-lang"
+                    />
+                    <span>RU</span>
+                  </a>
+                  <a href="#" class="drop-eng">
+                    <img
+                      src="https://bravotravel.az/img/united-kingdom.png"
+                      alt="EN-lang"
+                    />
+                    <span>EN</span>
+                  </a>
+                </div>
+              </button>
+            </div>
+            <a href="tel:+99450 603 77 77" class="call-link">
+              <img
+                src="https://bravotravel.az/img/callcolor.png"
+                alt="call-logo"
+              />
+              <span>(+99450) 603 77 77</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="carousel">
+        <div class="swiper-content-my">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  class="bg-layer"
+                  src="https://bravotravel.az/img/layer.png"
+                />
+                <img
+                  class="bg-baku"
+                  src="https://bravotravel.az/img/baku.png"
+                />
+                <img class="bg-fly" src="https://bravotravel.az/img/fly.png" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="bg-layer"
+                  src="https://bravotravel.az/img/layer.png"
+                />
+                <img
+                  class="bg-baku"
+                  src="https://bravotravel.az/img/baku.png"
+                />
+                <img class="bg-fly" src="https://bravotravel.az/img/fly.png" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="bg-layer"
+                  src="https://bravotravel.az/img/layer.png"
+                />
+                <img
+                  class="bg-baku"
+                  src="https://bravotravel.az/img/baku.png"
+                />
+                <img class="bg-fly" src="https://bravotravel.az/img/fly.png" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="bg-layer"
+                  src="https://bravotravel.az/img/layer.png"
+                />
+                <img
+                  class="bg-baku"
+                  src="https://bravotravel.az/img/baku.png"
+                />
+                <img class="bg-fly" src="https://bravotravel.az/img/fly.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clouds">
+          <div class="cloud cloud-first">
+            <img src="https://bravotravel.az/img/cloud1.png" alt="" />
+          </div>
+          <div class="cloud cloud-second">
+            <img src="https://bravotravel.az/img/cloud12.png" alt="" />
+          </div>
+          <div class="cloud cloud-third">
+            <img src="https://bravotravel.az/img/cloud7.png" alt="" />
+          </div>
+          <div class="cloud cloud-fourth">
+            <img src="https://bravotravel.az/img/cloud6.png" alt="" />
+          </div>
+          <div class="cloud cloud-fifth">
+            <img src="https://bravotravel.az/img/cloud5.png" alt="" />
+          </div>
+          <div class="cloud cloud-sixth">
+            <img src="https://bravotravel.az/img/cloud10.png" alt="" />
+          </div>
+        </div>
+
+        <div class="hero-carousel-main">
+          <div class="hero-dots-container"></div>
+
+          <article id="hero-title-box">
+            <h2 class="hero-title-text">istanbul</h2>
+            <p class="hero-desc-text">tarix yazan şəhər</p>
+            <div id="infos">
+              <div class="info avia">
+                <i class="fas fa-plane"></i>
+                <p>Aviabileti</p>
+              </div>
+              <div class="info avia">
+                <i class="fas fa-car"></i>
+                <p>Rent a car</p>
+              </div>
+              <div class="info avia">
+                <i class="fas fa-bed"></i>
+                <p>Otellər</p>
+              </div>
+              <div class="info avia">
+                <i class="fas fa-map-signs"></i>
+                <p>Turlar</p>
+              </div>
+              <div class="info avia">
+                <i class="fas fa-passport"></i>
+                <p>Viza</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slider-engine swiper">
+            <div class="hero-wrapper-box swiper-wrapper"></div>
+          </article>
+        </div>
+      </section>
+      <section id="tours">
+        <div class="container">
+          <div class="bg">
+            <div class="cards-head">
+              <h2>Qaynar turlar</h2>
+              <a href="#">Bütün turlara bax</a>
+            </div>
+
+            <div class="tours-carousel">
+              <div class="cards-carousel swiper">
+                <div class="cards swiper-wrapper">
+                  <div class="card swiper-slide">
+                    <img
+                      src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                      alt="Tbilisi"
+                    />
+                    <div class="card-info">
+                      <h3>Tbilisi</h3>
+                      <h4>18.09.2022 - 23.09.2022</h4>
+                      <div class="card-footer">
+                        <p>2453$ - 2345$</p>
+                        <span>Ətraflı</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img
+                      src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                      alt="Tbilisi"
+                    />
+                    <div class="card-info">
+                      <h3>Tbilisi</h3>
+                      <h4>18.09.2022 - 23.09.2022</h4>
+                      <div class="card-footer">
+                        <p>2453$ - 2345$</p>
+                        <span>Ətraflı</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img
+                      src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                      alt="Tbilisi"
+                    />
+                    <div class="card-info">
+                      <h3>Tbilisi</h3>
+                      <h4>18.09.2022 - 23.09.2022</h4>
+                      <div class="card-footer">
+                        <p>2453$ - 2345$</p>
+                        <span>Ətraflı</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img
+                      src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                      alt="Tbilisi"
+                    />
+                    <div class="card-info">
+                      <h3>Tbilisi</h3>
+                      <h4>18.09.2022 - 23.09.2022</h4>
+                      <div class="card-footer">
+                        <p>2453$ - 2345$</p>
+                        <span>Ətraflı</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <img
+                      src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                      alt="Tbilisi"
+                    />
+                    <div class="card-info">
+                      <h3>Tbilisi</h3>
+                      <h4>18.09.2022 - 23.09.2022</h4>
+                      <div class="card-footer">
+                        <p>2453$ - 2345$</p>
+                        <span>Ətraflı</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="card-navbtn card-prev">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <button class="card-navbtn card-next">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="new-tours">
+        <div class="container">
+          <div class="bg new-tours-bg">
+            <div class="cards-head">
+              <h2>Ən yeni turlar</h2>
+              <a href="#">Bütün turlara bax</a>
+            </div>
+            <div class="new-cards">
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg"
+                  alt="Tbilisi"
+                />
+                <div class="card-info">
+                  <h3>Tbilisi</h3>
+                  <h4>18.09.2022 - 23.09.2022</h4>
+                  <div class="card-footer">
+                    <p>5885 AZN</p>
+                    <span>Ətraflı</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="country-tours">
+        <img
+          src="https://bravotravel.az/img/cloud7.png"
+          class="cloud-topright"
+          alt="Cloude image"
+        />
+        <img
+          src="https://bravotravel.az/img/cloud8.png"
+          class="cloud-bottomright"
+          alt="Cloude image"
+        />
+        <img
+          src="https://bravotravel.az/img/cloud2.png"
+          class="cloud-bottomleft"
+          alt="Cloude image"
+        />
+        <div class="container">
+          <div class="cards-head">
+            <h2>Ölkə turları</h2>
+            <a href="#">Bütün turlara bax</a>
+          </div>
+          <div class="grid-cards">
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+            <div class="card-grid">
+              <a href="#">
+                <img
+                  src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1"
+                  alt="Maldiv"
+                />
+                <div class="overlay"></div>
+                <div class="tour-info">
+                  <h3>Maldiv</h3>
+                  <p>Bir yerüzü cənnəti</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="order">
+        <div class="container">
+          <div class="form-div">
+            <div class="form-container">
+              <img
+                src="https://bravotravel.az/img/cloud9.png"
+                alt="Cloude image"
+                class="cloud-bottomleft"
+              />
+              <img
+                src="https://bravotravel.az/img/cloud5.png"
+                alt="Cloude image"
+                class="cloud-bottomright"
+              />
+              <img
+                src="https://bravotravel.az/img/lady.png"
+                class="lady"
+                alt=""
+              />
+              <div class="form-bg"></div>
+              <div class="form-head">
+                <h3>Online sifariş</h3>
+                <img src="https://bravotravel.az/img/Forma%201-5.png" alt="" />
+              </div>
+              <form>
+                <div class="inputs-row">
+                  <input type="text" placeholder="* Ad, Soyad" required />
+                  <input type="text" placeholder="* Mobil telefon" required />
+                </div>
+                <select name="service" id="service-select">
+                  <option value="" selected>-- Xidməti seçin</option>
+                  <option value="otel_rezervasiyalari">
+                    Otel rezervasiyaları
+                  </option>
+                  <option value="aviabiletler">Aviabiletlər</option>
+                  <option value="vip_xidmetler">VİP xidmətlər</option>
+                  <option value="korporativ_biletler">
+                    Korporativ biletlər
+                  </option>
+                  <option value="viza_desteyi">Viza Dəstəyi</option>
+                  <option value="biznes_turizmi">Biznes Turizmi</option>
+                  <option value="transfer">Transfer</option>
+                  <option value="sigorta">Sığorta</option>
+                  <option value="saglamliq_turizmi">Sağlamlıq Turizmi</option>
+                  <option value="xarici_daxili_turlar">
+                    Xarici və Daxili turlar
+                  </option>
+                  <option value="qrup_turlari">Qrup turları</option>
+                  <option value="kruiz_seyahati">Kruiz səyahəti</option>
+                  <option value="komanda_inkisafi">Komanda inkişafı</option>
+                  <option value="tecili_destek">Təcili dəstək</option>
+                </select>
+                <textarea
+                  placeholder="Əlavə qeydlərinizi bura yazın"
+                  class="text"
+                ></textarea>
+
+                <input type="submit" value="Göndər" class="submit-btn" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="first">
+        <img
+          src="https://bravotravel.az/img/cloud3.png"
+          alt="cloud image"
+          class="cloud-footer left"
+        />
+        <img
+          src="https://bravotravel.az/img/cloud4.png"
+          alt="cloud image"
+          class="cloud-footer right"
+        />
+        <div class="container">
+          <div class="info">
+            <div class="info-item">
+              <div class="imgdiv">
+                <img
+                  src="https://bravotravel.az/img/pin.png"
+                  alt="Locate png"
+                />
+              </div>
+              <p>
+                Azadlıq pr. 95/12. Bakı, Azərbaycan <br />
+                Əhməd Cəmil Küçəsi, 2, Bakı, Azərbaycan
+              </p>
+            </div>
+            <div class="info-item">
+              <div class="imgdiv">
+                <img
+                  src="https://bravotravel.az/img/message.png"
+                  alt="Mail png"
+                />
+              </div>
+              <a href="mailto:info@bravotravel.az">info@bravotravel.az</a>
+            </div>
+            <div class="info-item">
+              <div class="imgdiv">
+                <img src="https://bravotravel.az/img/call.png" alt="Call png" />
+              </div>
+              <a href="tel:+994 12 599 00 00">(+99450) 050 603 77 77</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="container">
+          <div class="info">
+            <div class="info-item">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div class="info-item">
+              <p>© Copyright 2026. Bütün hüquqları qorunur</p>
+            </div>
+            <p class="info-item">
+              Created By
+              <a target="_blank" href="https://okmedia.az/"
+                ><img
+                  src="https://bravotravel.az/img/ok_logo.png"
+                  alt="OK Media logo"
+              /></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="chat-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 800 800"
+        height="32px"
+        width="32px"
+        role="img"
+        alt="Söhbət ikonu"
+        aria-labelledby="openIconTitle openIconDesc"
+        class="tawk-min-chat-icon"
+      >
+        <title id="openIconTitle">Opens Chat</title>
+        <desc id="openIconDesc">This icon Opens the chat window.</desc>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M400 26.2c-193.3 0-350 156.7-350 350 0 136.2 77.9 254.3 191.5 312.1 15.4 8.1 31.4 15.1 48.1 20.8l-16.5 63.5c-2 7.8 5.4 14.7 13 12.1l229.8-77.6c14.6-5.3 28.8-11.6 42.4-18.7C672 630.6 750 512.5 750 376.2c0-193.3-156.7-350-350-350zm211.1 510.7c-10.8 26.5-41.9 77.2-121.5 77.2-79.9 0-110.9-51-121.6-77.4-2.8-6.8 5-13.4 13.8-11.8 76.2 13.7 147.7 13 215.3.3 8.9-1.8 16.8 4.8 14 11.7z"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="chat"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  </body>
 </html>
