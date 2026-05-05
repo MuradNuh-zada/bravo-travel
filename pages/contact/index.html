@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./contact.css" />
+
     <title>Contact</title>
   </head>
   <body>
@@ -93,12 +94,7 @@
       </div>
       <img src="https://bravotravel.az/img/cloud4.png" class="cloud" />
     </header>
-    <iframe
-      src="https://yandex.com/map-widget/v1/?um=constructor%3Ac4d3b99048248299885c19ce1c12726fffc8ec5ab090e57154c669b33750c770&amp;source=constructor"
-      width="100%"
-      height="400"
-      frameborder="0"
-    ></iframe>
+    <div id="map" style="width: 100%; height: 400px"></div>
 
     <section id="contact">
       <div class="container">
@@ -141,25 +137,116 @@
               <div class="input-box">
                 <label for="full-name">Ad, Soyad</label>
                 <div class="focus-bg">
-                  <input type="text" name="full-name" />
+                  <input
+                    type="text"
+                    name="full-name"
+                    placeholder="Ad, Soyad"
+                    required
+                  />
                 </div>
               </div>
               <div class="input-box">
                 <label for="number">Telefon nömrəniz</label>
                 <div class="focus-bg">
-                  <input type="number" name="number" />
+                  <input
+                    type="number"
+                    name="number"
+                    placeholder="Telefon nömrəniz"
+                    required
+                  />
                 </div>
               </div>
             </div>
-            <div class="message">
+            <div class="textarea-box">
               <label for="message">Mesajınız</label>
               <div class="focus-bg">
-                <textarea rows="7" name="message" id="message"></textarea>
+                <textarea
+                  rows="7"
+                  name="message"
+                  id="message"
+                  placeholder="Mesajınız"
+                  required
+                ></textarea>
               </div>
             </div>
+            <input class="submit-btn" type="submit" value="Göndər " />
           </form>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="first">
+        <img
+          src="https://bravotravel.az/img/cloud3.png"
+          alt="cloud image"
+          class="cloud-footer left"
+        />
+        <img
+          src="https://bravotravel.az/img/cloud4.png"
+          alt="cloud image"
+          class="cloud-footer right"
+        />
+        <div class="container">
+          <div class="info">
+            <div class="info-item">
+              <div class="imgdiv">
+                <img
+                  src="https://bravotravel.az/img/pin.png"
+                  alt="Locate png"
+                />
+              </div>
+              <p>
+                Azadlıq pr. 95/12. Bakı, Azərbaycan <br />
+                Əhməd Cəmil Küçəsi, 2, Bakı, Azərbaycan
+              </p>
+            </div>
+            <div class="info-item">
+              <div class="imgdiv">
+                <img
+                  src="https://bravotravel.az/img/message.png"
+                  alt="Mail png"
+                />
+              </div>
+              <a href="mailto:info@bravotravel.az">info@bravotravel.az</a>
+            </div>
+            <div class="info-item">
+              <div class="imgdiv">
+                <img src="https://bravotravel.az/img/call.png" alt="Call png" />
+              </div>
+              <a href="tel:+994 12 599 00 00">(+99450) 050 603 77 77</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="container">
+          <div class="info">
+            <div class="info-item">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div class="info-item">
+              <p>© Copyright 2026. Bütün hüquqları qorunur</p>
+            </div>
+            <p class="info-item">
+              Created By
+              <a target="_blank" href="https://okmedia.az/"
+                ><img
+                  src="https://bravotravel.az/img/ok_logo.png"
+                  alt="OK Media logo"
+              /></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=az_AZ"></script>
+    <script src="./contact.js"></script>
   </body>
 </html>

@@ -369,9 +369,7 @@ header nav {
   display: block;
   margin-bottom: 6px;
 }
-.contact input,
 .contact textarea {
-  width: 100%;
   padding: 12px;
   border: 2px solid #eaeaea;
   border-radius: 3px;
@@ -380,7 +378,6 @@ header nav {
   position: relative;
   z-index: 2;
 }
-.contact input:focus,
 .contact textarea:focus {
   background: transparent;
 }
@@ -388,6 +385,7 @@ header nav {
   resize: vertical;
   max-height: 300px;
   min-height: 100px;
+  width: 100%;
 }
 .contact input {
   height: 50px;
@@ -402,11 +400,30 @@ header nav {
   display: flex;
   gap: 30px;
 }
-.name-number .input-box {
+.name-number input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #eaeaea;
+  border-radius: 3px;
+  font-size: 14px;
+  outline: none;
   position: relative;
+  z-index: 2;
+}
+.name-number input:focus {
+  background: transparent;
+}
+.name-number .input-box {
   width: 50%;
 }
-.name-number .input-box label {
+
+.textarea-box,
+.input-box {
+  position: relative;
+  margin-top: 30px;
+}
+.textarea-box label,
+.input-box label {
   position: absolute;
   left: 14px;
   width: 100%;
@@ -416,7 +433,8 @@ header nav {
   letter-spacing: 0.5px;
   font-size: 14px;
 }
-.name-number .input-box:focus-within label {
+.textarea-box:focus-within label,
+.input-box:focus-within label {
   top: -18px;
   left: 0;
   font-size: 14px;
@@ -449,4 +467,125 @@ header nav {
 .focus-bg:focus-within::before, .focus-bg:focus-within::after {
   width: 50%;
   height: 100%;
+}
+
+.submit-btn {
+  display: flex;
+  justify-self: end;
+  margin-top: 20px;
+  background-color: #fb9505;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 6px 21px 0 rgba(251, 149, 5, 0.71);
+  padding: 13px 36px 13px 54px;
+  border-radius: 24px;
+  border: none;
+  transition: 0.3s all ease-in-out;
+  outline: none;
+  background-image: url("https://bravotravel.az/img/submit-icon.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 21px center;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  box-shadow: none;
+}
+
+footer .info,
+footer .info-item {
+  display: flex;
+  align-items: center;
+}
+footer .info {
+  justify-content: space-between;
+}
+footer .info-item {
+  width: 33%;
+}
+footer .info-item:last-child {
+  justify-content: flex-end;
+}
+footer .info-item:nth-child(2) {
+  justify-content: center;
+}
+
+.first {
+  background-color: #1e419b;
+  padding: 50px 0;
+  position: relative;
+}
+.first .info {
+  color: #fff;
+  gap: 10px;
+}
+.first .info-item {
+  gap: 8px;
+}
+.first .info-item a {
+  position: relative;
+}
+.first .info-item a:after {
+  content: "";
+  height: 1px;
+  width: 0;
+  position: absolute;
+  background-color: #fff;
+  display: block;
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transform-origin: 0 50%;
+  transition-property: all;
+  transition-duration: 0.5s;
+  bottom: 0;
+}
+.first .info-item a:hover:after {
+  width: 100%;
+}
+.first .imgdiv {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f58220;
+}
+.first .cloud-footer {
+  position: absolute;
+}
+.first .left {
+  left: 0;
+  bottom: 30px;
+}
+.first .right {
+  right: 0;
+  bottom: 0;
+}
+
+.second {
+  padding: 20px 0;
+}
+.second .info-item {
+  gap: 8px;
+  font-size: 15px;
+}
+.second .info-item:last-child {
+  color: #b2b2b2;
+}
+.second .social-link {
+  background-color: gray;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  transition: 0.5s all ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second .social-link:hover {
+  background-color: #f58220;
 }/*# sourceMappingURL=contact.css.map */
