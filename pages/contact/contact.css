@@ -112,10 +112,10 @@ header ul {
   align-items: center;
   justify-content: space-between;
 }
-header ul li:first-child a {
+header ul li:last-child a {
   color: #f58220;
 }
-header ul li:first-child a span:after {
+header ul li:last-child a span:after {
   width: 100%;
 }
 header .cloud {
@@ -305,4 +305,148 @@ header nav {
 }
 .call-link span {
   font-size: 13px;
+}
+
+#contact {
+  transition: all 0.1s;
+  cursor: pointer;
+}
+#contact:hover {
+  background-color: #f7f7f8;
+  border-bottom: 1px solid #fbb439;
+}
+
+#contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0px;
+  border-bottom: 1px solid #d6d9db;
+}
+#contact-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#work-hours {
+  text-align: center;
+}
+
+#contact-form {
+  padding: 50px 0;
+}
+
+.contact-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.contact-head h3 {
+  margin-left: 16px;
+  color: #f1823a;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.contact {
+  background-image: url("https://bravotravel.az/img/map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact .line {
+  height: 6px;
+  position: relative;
+  background: #fbb439;
+  border-radius: 25px;
+  box-shadow: inset 0 -1px 1px hsla(0, 0%, 100%, 0.3);
+  margin: 20px 0;
+}
+.contact label {
+  display: block;
+  margin-bottom: 6px;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #eaeaea;
+  border-radius: 3px;
+  font-size: 14px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+}
+.contact input:focus,
+.contact textarea:focus {
+  background: transparent;
+}
+.contact textarea {
+  resize: vertical;
+  max-height: 300px;
+  min-height: 100px;
+}
+.contact input {
+  height: 50px;
+}
+.contact input::-webkit-outer-spin-button,
+.contact input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.name-number {
+  display: flex;
+  gap: 30px;
+}
+.name-number .input-box {
+  position: relative;
+  width: 50%;
+}
+.name-number .input-box label {
+  position: absolute;
+  left: 14px;
+  width: 100%;
+  top: 15px;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+.name-number .input-box:focus-within label {
+  top: -18px;
+  left: 0;
+  font-size: 14px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.focus-bg {
+  position: relative;
+  overflow: hidden;
+}
+.focus-bg::before, .focus-bg::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+.focus-bg::before {
+  top: 0;
+  left: 0;
+  background: #fffcef;
+}
+.focus-bg::after {
+  bottom: 0;
+  right: 0;
+  background: #fffcef;
+}
+.focus-bg:focus-within::before, .focus-bg:focus-within::after {
+  width: 50%;
+  height: 100%;
 }/*# sourceMappingURL=contact.css.map */
