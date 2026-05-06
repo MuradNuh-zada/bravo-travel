@@ -842,11 +842,11 @@ header.scrolled nav {
 #carousel .hero-carousel-main .hero-dots-container .dot-parent:after {
   content: "";
   position: absolute;
-  top: 45%;
+  top: 40%;
   width: 45px;
   height: 1.5px;
   background-color: #1e419b;
-  left: 8px;
+  left: 10px;
 }
 #carousel .hero-carousel-main .hero-dots-container .swiper-pagination-bullet:nth-last-child(2) .dot::after {
   width: 39px;
