@@ -163,6 +163,7 @@ header.scrolled nav {
   opacity: 0;
 }
 .header-list li a span:hover:after {
+  opacity: 1;
   animation: bounceIn 0.6s ease forwards;
 }
 
