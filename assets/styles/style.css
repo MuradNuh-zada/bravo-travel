@@ -160,6 +160,7 @@ header.scrolled nav {
   transform: scaleX(0);
   transform-origin: left;
   animation: bounceOut 0.6s ease forwards;
+  opacity: 0;
 }
 .header-list li a span:hover:after {
   animation: bounceIn 0.6s ease forwards;
@@ -837,7 +838,7 @@ header.scrolled nav {
   height: 8px;
   border-radius: 50%;
 }
-#carousel .hero-carousel-main .hero-dots-container .dot-parent .dot:after {
+#carousel .hero-carousel-main .hero-dots-container .dot-parent:after {
   content: "";
   position: absolute;
   top: 45%;
@@ -849,7 +850,7 @@ header.scrolled nav {
 #carousel .hero-carousel-main .hero-dots-container .swiper-pagination-bullet:nth-last-child(2) .dot::after {
   width: 39px;
 }
-#carousel .hero-carousel-main .hero-dots-container .swiper-pagination-bullet:last-child .dot:after {
+#carousel .hero-carousel-main .hero-dots-container .swiper-pagination-bullet:last-child:after {
   display: none;
 }
 #carousel .hero-carousel-main .hero-dots-container .swiper-pagination-bullet-active .dot {

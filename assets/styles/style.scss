@@ -71,7 +71,6 @@ header.scrolled {
         transform: scaleX(0);
     }
 }
-
 .header-list {
     li {
         a {
@@ -101,6 +100,7 @@ header.scrolled {
                     transform: scaleX(0);
                     transform-origin: left;
                     animation: bounceOut 0.6s ease forwards;
+                    opacity: 0;
                 }
 
                 &:hover {
@@ -773,22 +773,22 @@ header.scrolled {
                     width: 8px;
                     height: 8px;
                     border-radius: 50%;
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        top: 45%;
-                        width: 45px;
-                        height: 1.5px;
-                        background-color: #1e419b;
-                        left: 8px;
-                    }
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 45%;
+                    width: 45px;
+                    height: 1.5px;
+                    background-color: #1e419b;
+                    left: 8px;
                 }
             }
 
             .swiper-pagination-bullet:nth-last-child(2) .dot::after {
                 width: 39px;
             }
-            .swiper-pagination-bullet:last-child .dot:after {
+            .swiper-pagination-bullet:last-child:after {
                 display: none;
             }
 
