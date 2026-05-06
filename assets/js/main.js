@@ -165,7 +165,7 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
   },
   allowTouchMove: false,
   slidesPerView: "auto",
-  spaceBetween: 145,
+  spaceBetween: 125,
   pagination: {
     el: ".hero-dots-container",
     clickable: true,

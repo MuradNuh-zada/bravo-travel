@@ -183,9 +183,16 @@ header nav {
   transform: scaleX(0);
   transform-origin: left;
   animation: bounceOut 0.6s ease forwards;
+  opacity: 0;
 }
 .header-list li a span:hover:after {
+  opacity: 1;
   animation: bounceIn 0.6s ease forwards;
+}
+.header-list li a span.selected:after {
+  transform: scaleX(100%);
+  animation: bounceIn 0.6s ease forwards;
+  opacity: 1;
 }
 
 .logo img {
