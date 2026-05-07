@@ -34,6 +34,7 @@ const destinationHeadSlider = [
 const swiperWrapper = document.querySelector(
   ".hero-slider-engine .swiper-wrapper",
 );
+
 swiperWrapper.innerHTML = destinationHeadSlider
   .map(
     (item) => `
@@ -186,4 +187,47 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
       if (descEl && desc) descEl.innerText = desc;
     },
   },
+});
+
+// document.querySelector(".hero-slider-engine").addEventListener("click", (e) => {
+//   const slide = e.target.closest(".swiper-slide");
+//   if (!slide) return;
+
+//   const index = Number(slide.getAttribute("data-swiper-slide-index"));
+
+//   uniqueHeroSwiper.slideToLoop(index);
+// });
+
+// ! Burger menu
+
+const menuCloseBtn = document.querySelector(".close button"),
+  navMenuOverlay = document.querySelector("nav .overlay"),
+  navMenu = document.querySelector(".header-list"),
+  burgerMenuBtn = document.querySelector(".burger-menu");
+
+burgerMenuBtn.addEventListener("click", () => {
+  navMenuOverlay.style.display = "block";
+  navMenu.style.display = "block";
+  navMenu.classList.add("animate-enter");
+  navMenu.classList.remove("animate-left");
+});
+
+navMenuOverlay.addEventListener("click", () => {
+  navMenu.classList.add("animate-left");
+  navMenu.classList.remove("animate-enter");
+  navMenuOverlay.style.display = "none";
+  setTimeout(() => {
+    navMenu.style.display = "none";
+    navMenu.classList.remove("animate-left");
+  }, 300);
+});
+
+menuCloseBtn.addEventListener("click", () => {
+  navMenu.classList.add("animate-left");
+  navMenu.classList.remove("animate-enter");
+  navMenuOverlay.style.display = "none";
+  setTimeout(() => {
+    navMenu.style.display = "none";
+    navMenu.classList.remove("animate-left");
+  }, 300);
 });
