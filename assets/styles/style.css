@@ -80,6 +80,9 @@ header {
   right: 0;
   z-index: 9999;
 }
+header .overlay {
+  display: none;
+}
 header .cloud {
   position: absolute;
   top: 0;
@@ -88,6 +91,33 @@ header .cloud {
 }
 header nav {
   width: 72%;
+}
+header .close,
+header .fas {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transform: rotateY(180deg);
+}
+.burger-menu span {
+  display: block;
+  margin-bottom: 5px;
+  height: 3px;
+  background-color: #2872a1;
+}
+.burger-menu .line1,
+.burger-menu .line2 {
+  width: 30px;
+}
+.burger-menu .line3 {
+  width: 19px;
 }
 
 header.scrolled {
@@ -696,6 +726,7 @@ header.scrolled nav {
 #carousel .bg-layer {
   position: absolute;
   width: 100%;
+  height: 100%;
   z-index: -5;
 }
 #carousel .bg-baku {
@@ -842,11 +873,11 @@ header.scrolled nav {
 #carousel .hero-carousel-main .hero-dots-container .dot-parent:after {
   content: "";
   position: absolute;
-  top: 45%;
+  top: 40%;
   width: 45px;
   height: 1.5px;
   background-color: #1e419b;
-  left: 8px;
+  left: 10px;
 }
 #carousel .hero-carousel-main .hero-dots-container .swiper-pagination-bullet:nth-last-child(2) .dot::after {
   width: 39px;

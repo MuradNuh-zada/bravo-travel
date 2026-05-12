@@ -596,4 +596,27 @@ footer .info-item:nth-child(2) {
 }
 .second .social-link:hover {
   background-color: #f58220;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transform: rotateY(180deg);
+}
+.burger-menu span {
+  display: block;
+  margin-bottom: 5px;
+  height: 3px;
+  background-color: #2872a1;
+}
+.burger-menu .line1,
+.burger-menu .line2 {
+  width: 30px;
+}
+.burger-menu .line3 {
+  width: 19px;
 }/*# sourceMappingURL=contact.css.map */

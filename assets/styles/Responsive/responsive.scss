@@ -1,0 +1,121 @@
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    @keyframes animationEnter {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 0;
+        }
+    }
+
+    @keyframes animationLeft {
+        0% {
+            right: 0;
+        }
+        100% {
+            right: -100%;
+        }
+    }
+    .header-list {
+        flex-direction: column;
+        justify-content: normal;
+        position: fixed;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        bottom: 0;
+        background-color: #3a63b0;
+        align-items: start;
+        z-index: 999;
+        .close {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f58220;
+            font-size: 20px;
+            position: relative;
+            button {
+                font-size: 1.25rem;
+                line-height: 1;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                font-size: 28px;
+                color: #2872a1;
+            }
+        }
+        li {
+            width: 100%;
+            padding: 27px 35px;
+            color: white;
+            font-weight: 500;
+            border-bottom: solid 1px #2d57a5;
+            padding: 20px 35px;
+            a {
+                font-size: 20px;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+            }
+            a.selected {
+                color: #f58220;
+                span {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .fas {
+            display: block;
+        }
+    }
+    .selected {
+    }
+    header {
+        .overlay {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 950;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+    .header-list.animate-enter {
+        animation: animationEnter 0.3s normal;
+        display: block;
+    }
+
+    .header-list.animate-left {
+        animation: animationLeft 0.3s normal;
+        display: none;
+    }
+
+    nav .overlay,
+    .header-list,
+    .search-logo,
+    .call-link {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 600px) {
+}
