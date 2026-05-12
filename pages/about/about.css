@@ -127,6 +127,36 @@ header .cloud {
 header nav {
   width: 72%;
 }
+header .overlay {
+  display: none;
+}
+header .close,
+header .fas {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transform: rotateY(180deg);
+}
+.burger-menu span {
+  display: block;
+  margin-bottom: 5px;
+  height: 3px;
+  background-color: #2872a1;
+}
+.burger-menu .line1,
+.burger-menu .line2 {
+  width: 30px;
+}
+.burger-menu .line3 {
+  width: 19px;
+}
 
 @keyframes bounceIn {
   0% {
@@ -189,10 +219,19 @@ header nav {
   opacity: 1;
   animation: bounceIn 0.6s ease forwards;
 }
-.header-list li a span.selected:after {
+.header-list li a.selected {
+  color: #f58220;
+}
+.header-list li a.selected span:after {
   transform: scaleX(100%);
   animation: bounceIn 0.6s ease forwards;
   opacity: 1;
+}
+.header-list .header-list.d-none {
+  display: none;
+}
+.header-list .header-list.d-block {
+  display: block;
 }
 
 .logo img {
@@ -508,27 +547,4 @@ footer .info-item:nth-child(2) {
 }
 .second .social-link:hover {
   background-color: #f58220;
-}
-
-.burger-menu {
-  display: none;
-  cursor: pointer;
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  background-color: transparent;
-  border: 1px solid transparent;
-  transform: rotateY(180deg);
-}
-.burger-menu span {
-  display: block;
-  margin-bottom: 5px;
-  height: 3px;
-  background-color: #2872a1;
-}
-.burger-menu .line1,
-.burger-menu .line2 {
-  width: 30px;
-}
-.burger-menu .line3 {
-  width: 19px;
 }/*# sourceMappingURL=about.css.map */

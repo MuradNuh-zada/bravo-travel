@@ -65,7 +65,7 @@ const menuCloseBtn = document.querySelector(".close button"),
 
 burgerMenuBtn.addEventListener("click", () => {
   navMenuOverlay.style.display = "block";
-  navMenu.style.display = "block";
+  navMenu.classList.add("d-block");
   navMenu.classList.add("animate-enter");
   navMenu.classList.remove("animate-left");
 });
@@ -75,7 +75,7 @@ navMenuOverlay.addEventListener("click", () => {
   navMenu.classList.remove("animate-enter");
   navMenuOverlay.style.display = "none";
   setTimeout(() => {
-    navMenu.style.display = "none";
+    navMenu.classList.add("d-none");
     navMenu.classList.remove("animate-left");
   }, 300);
 });
@@ -85,7 +85,7 @@ menuCloseBtn.addEventListener("click", () => {
   navMenu.classList.remove("animate-enter");
   navMenuOverlay.style.display = "none";
   setTimeout(() => {
-    navMenu.style.display = "none";
+    navMenu.classList.add("d-none");
     navMenu.classList.remove("animate-left");
   }, 300);
 });

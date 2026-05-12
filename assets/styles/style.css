@@ -196,6 +196,42 @@ header.scrolled nav {
   opacity: 1;
   animation: bounceIn 0.6s ease forwards;
 }
+.header-list .header-list.d-none {
+  display: none;
+}
+.header-list .header-list.d-block {
+  display: block;
+}
+.header-list .burger-menu-search {
+  height: 50px;
+  width: 100%;
+  padding: 12px 30px;
+  border-radius: 25px;
+  outline: none !important;
+  font-size: 13px;
+  border: 1px solid #fff;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.header-list .li-search {
+  display: none;
+  padding: 27px 35px;
+  align-items: center;
+}
+.header-list .burger-search-icon {
+  height: 50px;
+  background-image: url("https://bravotravel.az/img/search.png");
+  cursor: pointer;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  background-color: white;
+  padding: 24.5px;
+  background-position: center;
+  transition: 500ms all ease;
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
 
 .logo img {
   max-width: 160px;

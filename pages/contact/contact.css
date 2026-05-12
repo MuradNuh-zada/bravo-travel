@@ -127,6 +127,13 @@ header .cloud {
 header nav {
   width: 72%;
 }
+header .overlay {
+  display: none;
+}
+header .close,
+header .fas {
+  display: none;
+}
 
 @keyframes bounceIn {
   0% {
@@ -189,10 +196,19 @@ header nav {
   opacity: 1;
   animation: bounceIn 0.6s ease forwards;
 }
-.header-list li a span.selected:after {
+.header-list li a.selected {
+  color: #f58220;
+}
+.header-list li a.selected span:after {
   transform: scaleX(100%);
   animation: bounceIn 0.6s ease forwards;
   opacity: 1;
+}
+.header-list .header-list.d-none {
+  display: none;
+}
+.header-list .header-list.d-block {
+  display: block;
 }
 
 .logo img {

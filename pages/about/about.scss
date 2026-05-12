@@ -65,7 +65,37 @@ header {
     nav {
         width: 72%;
     }
+    .overlay {
+        display: none;
+    }
+    .close,
+    .fas {
+        display: none;
+    }
 }
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transform: rotateY(180deg);
+    span {
+        display: block;
+        margin-bottom: 5px;
+        height: 3px;
+        background-color: #2872a1;
+    }
+    .line1,
+    .line2 {
+        width: 30px;
+    }
+    .line3 {
+        width: 19px;
+    }
+}
+
 @keyframes bounceIn {
     0% {
         transform: scaleX(0);
@@ -133,7 +163,11 @@ header {
                     }
                 }
             }
-            span.selected {
+        }
+
+        a.selected {
+            color: $secondary-color;
+            span {
                 &:after {
                     transform: scaleX(100%);
                     animation: bounceIn 0.6s ease forwards;
@@ -141,6 +175,12 @@ header {
                 }
             }
         }
+    }
+    .header-list.d-none {
+        display: none;
+    }
+    .header-list.d-block {
+        display: block;
     }
 }
 
@@ -474,28 +514,5 @@ footer {
         &:hover {
             background-color: $secondary-color;
         }
-    }
-}
-
-.burger-menu {
-    display: none;
-    cursor: pointer;
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    background-color: transparent;
-    border: 1px solid transparent;
-    transform: rotateY(180deg);
-    span {
-        display: block;
-        margin-bottom: 5px;
-        height: 3px;
-        background-color: #2872a1;
-    }
-    .line1,
-    .line2 {
-        width: 30px;
-    }
-    .line3 {
-        width: 19px;
     }
 }
