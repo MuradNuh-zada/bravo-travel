@@ -60,6 +60,12 @@
     display: flex;
     justify-content: space-between;
   }
+  .header-list li a.selected {
+    color: #f58220;
+  }
+  .header-list li a.selected span:after {
+    display: none;
+  }
   .header-list .fas {
     display: block;
   }

@@ -60,10 +60,20 @@
                 display: flex;
                 justify-content: space-between;
             }
+            a.selected {
+                color: #f58220;
+                span {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
         }
         .fas {
             display: block;
         }
+    }
+    .selected {
     }
     header {
         .overlay {
@@ -81,7 +91,7 @@
         animation: animationEnter 0.3s normal;
         display: block;
     }
-    
+
     .header-list.animate-left {
         animation: animationLeft 0.3s normal;
         display: none;

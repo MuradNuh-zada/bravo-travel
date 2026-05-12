@@ -476,3 +476,26 @@ footer {
         }
     }
 }
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transform: rotateY(180deg);
+    span {
+        display: block;
+        margin-bottom: 5px;
+        height: 3px;
+        background-color: #2872a1;
+    }
+    .line1,
+    .line2 {
+        width: 30px;
+    }
+    .line3 {
+        width: 19px;
+    }
+}
