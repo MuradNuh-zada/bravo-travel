@@ -34,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     background-color: #f58220;
+    padding: 27px 35px;
     font-size: 20px;
     position: relative;
   }
@@ -48,26 +49,28 @@
   }
   .header-list li {
     width: 100%;
-    padding: 27px 35px;
     color: white;
     font-weight: 500;
     border-bottom: solid 1px #2d57a5;
-    padding: 20px 35px;
   }
   .header-list li a {
     font-size: 20px;
     padding: 0;
     display: flex;
+    padding: 27px 35px;
     justify-content: space-between;
+  }
+  .header-list li a span:after {
+    display: none;
   }
   .header-list li a.selected {
     color: #f58220;
   }
-  .header-list li a.selected span:after {
-    display: none;
-  }
   .header-list .fas {
     display: block;
+  }
+  .header-list .li-search {
+    display: flex;
   }
   header .overlay {
     display: block;
@@ -85,7 +88,6 @@
   }
   .header-list.animate-left {
     animation: animationLeft 0.3s normal;
-    display: none;
   }
   nav .overlay,
   .header-list,

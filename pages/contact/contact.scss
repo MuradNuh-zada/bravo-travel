@@ -65,6 +65,13 @@ header {
     nav {
         width: 72%;
     }
+    .overlay {
+        display: none;
+    }
+    .close,
+    .fas {
+        display: none;
+    }
 }
 @keyframes bounceIn {
     0% {
@@ -134,7 +141,10 @@ header {
                     }
                 }
             }
-            span.selected {
+        }
+        a.selected {
+            color: $secondary-color;
+            span {
                 &:after {
                     transform: scaleX(100%);
                     animation: bounceIn 0.6s ease forwards;
@@ -142,6 +152,12 @@ header {
                 }
             }
         }
+    }
+    .header-list.d-none {
+        display: none;
+    }
+    .header-list.d-block {
+        display: block;
     }
 }
 
