@@ -673,48 +673,56 @@ header.scrolled {
         left: 100%;
     }
 }
-
 #carousel {
-    height: 100vh;
+    width: 100%;
+    aspect-ratio: 21 /10;
+
     position: relative;
     overflow: hidden;
-    .bg-img-item {
-        position: absolute;
+
+    .swiper-content-my,
+    .swiper,
+    .swiper-wrapper,
+    .swiper-slide {
         width: 100%;
         height: 100%;
+        position: relative;
     }
-    .bg-images {
-        display: flex;
-    }
+
     .bg-layer {
         position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
+        object-fit: cover;
         z-index: -5;
     }
+
     .bg-baku {
         position: absolute;
+
+        width: clamp(300px, 45vw, 900px);
         top: 25%;
+        left: 20%;
+        transform: translateX(-45%);
         width: 45%;
+        height: auto;
         z-index: -3;
     }
+
     .bg-fly {
         position: absolute;
+
+        width: clamp(120px, 18vw, 350px);
+
         top: 16%;
+        left: 10%;
+
+        height: auto;
         z-index: -1;
-        width: auto;
     }
     .bg-fly.flying {
         animation: fly 4s ease-in-out;
-    }
-
-    .swiper-content-my {
-        width: 100%;
-        height: 100%;
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
     }
 
     .hero-carousel-main {
@@ -729,7 +737,9 @@ header.scrolled {
         z-index: 10;
 
         #hero-title-box {
-            width: 40%;
+            position: relative;
+            top: 130px;
+            left: -70px;
             .hero-title-text {
                 text-transform: uppercase;
                 font-size: 70px;
@@ -746,14 +756,14 @@ header.scrolled {
 
         .hero-slider-engine {
             margin: 0;
-            width: 50%;
             padding: 45px;
             position: relative;
             overflow: hidden;
+            left: 100px;
         }
         .hero-item-card {
             &.swiper-slide-active {
-                height: 370px;
+                transition: height 0.3s ease;
                 .hero-overlay {
                     display: none !important;
                 }
@@ -818,13 +828,17 @@ header.scrolled {
             }
         }
 
+        .dots-container {
+            position: relative;
+            z-index: 20;
+            transform: rotate(90deg);
+            width: 25%;
+            left: -45px;
+            top: 20px;
+        }
         .hero-dots-container {
             display: flex;
-            transform: rotate(90deg);
-            position: relative;
-            width: fit-content;
-            z-index: 20;
-
+            height: 100%;
             .swiper-pagination-bullet {
                 opacity: 1;
                 width: auto;
@@ -834,20 +848,21 @@ header.scrolled {
 
             .dot-parent {
                 position: relative;
-                margin-right: 35px;
-
+                margin-left: 30px;
+                width: 8px;
+                height: 8px;
                 .dot {
                     display: block;
                     background-color: #1e419b;
-                    width: 8px;
-                    height: 8px;
+                    width: 100%;
+                    height: 100%;
                     border-radius: 50%;
                 }
                 &:after {
                     content: "";
                     position: absolute;
                     top: 40%;
-                    width: 45px;
+                    width: 40px;
                     height: 1.5px;
                     background-color: #1e419b;
                     left: 10px;

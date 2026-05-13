@@ -158,15 +158,20 @@ const swiper = new Swiper(".cards-carousel", {
   },
 });
 
+let slideTimeout;
+
 const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
   loop: true,
+
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
+
   allowTouchMove: false,
   slidesPerView: "auto",
-  spaceBetween: 125,
+  spaceBetween: 130,
+
   pagination: {
     el: ".hero-dots-container",
     clickable: true,
@@ -174,30 +179,54 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
       return `<div class="${className} dot-parent"><span class="dot"></span></div>`;
     },
   },
+
   on: {
-    slideChange: function () {
+    init: function () {
       const activeSlide = this.slides[this.activeIndex];
-      const title = activeSlide.getAttribute("data-title");
-      const desc = activeSlide.getAttribute("data-desc");
+
+      if (activeSlide) {
+        activeSlide.style.height = "370px";
+      }
+    },
+
+    slideChange: function () {
+      clearTimeout(slideTimeout);
 
       const titleEl = document.querySelector(".hero-title-text");
       const descEl = document.querySelector(".hero-desc-text");
 
+      this.slides.forEach((slide) => {
+        slide.style.height = "300px";
+      });
+
+      const realSlide = this.slides[this.activeIndex];
+
+      const title = realSlide?.getAttribute("data-title");
+      const desc = realSlide?.getAttribute("data-desc");
+
       if (titleEl && title) titleEl.innerText = title;
       if (descEl && desc) descEl.innerText = desc;
+
+      slideTimeout = setTimeout(() => {
+        const current = this.slides[this.activeIndex];
+
+        if (current) {
+          current.style.height = "370px";
+        }
+      }, 300);
+    },
+
+    click: function (swiper, event) {
+      const clickedSlide = event.target.closest(".swiper-slide");
+
+      if (!clickedSlide) return;
+
+      const clickedIndex = clickedSlide.getAttribute("data-swiper-slide-index");
+
+      swiper.slideToLoop(clickedIndex);
     },
   },
 });
-
-// document.querySelector(".hero-slider-engine").addEventListener("click", (e) => {
-//   const slide = e.target.closest(".swiper-slide");
-//   if (!slide) return;
-
-//   const index = Number(slide.getAttribute("data-swiper-slide-index"));
-
-//   uniqueHeroSwiper.slideToLoop(index);
-// });
-
 // ! Burger menu
 
 const menuCloseBtn = document.querySelector(".close button"),
