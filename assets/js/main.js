@@ -170,7 +170,6 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
 
   allowTouchMove: false,
   slidesPerView: "auto",
-  spaceBetween: 130,
 
   pagination: {
     el: ".hero-dots-container",
@@ -180,6 +179,28 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
     },
   },
 
+  breakpoints: {
+    992: {
+      slidesPerView: 1,
+      spaceBetween: 140,
+    },
+    1170: {
+      slidesPerView: 1,
+      spaceBetween: 60,
+    },
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: 120,
+    },
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 130,
+    },
+  },
   on: {
     init: function () {
       const activeSlide = this.slides[this.activeIndex];
@@ -197,6 +218,7 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
 
       this.slides.forEach((slide) => {
         slide.style.height = "300px";
+        slide.style.transform = "translateY(0px)";
       });
 
       const realSlide = this.slides[this.activeIndex];
@@ -209,10 +231,10 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
 
       slideTimeout = setTimeout(() => {
         const current = this.slides[this.activeIndex];
+        const mediaQuery = window.matchMedia("(min-width: 1200px)");
 
-        if (current) {
-          current.style.height = "370px";
-        }
+        handleTabletChange(mediaQuery, current);
+        mediaQuery.addEventListener("change", handleTabletChange);
       }, 300);
     },
 
@@ -227,6 +249,17 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
     },
   },
 });
+
+function handleTabletChange(e, current) {
+  if (e.matches) {
+    return (current.style.height = "370px");
+  } else {
+    if (current) {
+      return (current.style.transform = "translateY(-42px)");
+    }
+  }
+}
+
 // ! Burger menu
 
 const menuCloseBtn = document.querySelector(".close button"),

@@ -377,7 +377,7 @@ header.scrolled {
     flex-wrap: wrap;
     justify-content: space-between;
     .card {
-        width: 260px;
+        flex: 0 0 23%;
     }
 }
 
@@ -426,7 +426,7 @@ header.scrolled {
 }
 .tours-carousel {
     position: relative;
-    padding-inline: 130px;
+    padding-inline: 150px;
 }
 
 .cards-carousel {
@@ -449,13 +449,13 @@ header.scrolled {
 }
 
 .card-prev {
-    left: 8%;
+    left: 10%;
     position: absolute;
     top: 40%;
 }
 
 .card-next {
-    right: 8%;
+    right: 10%;
     position: absolute;
     z-index: $z-overlay;
     top: 40%;
@@ -594,6 +594,9 @@ header.scrolled {
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+        h3{
+            font-weight: 500;
+        }
     }
     form {
         position: relative;
@@ -676,10 +679,9 @@ header.scrolled {
 #carousel {
     width: 100%;
     aspect-ratio: 21 /10;
-
     position: relative;
     overflow: hidden;
-
+    // height: 98vh;
     .swiper-content-my,
     .swiper,
     .swiper-wrapper,
@@ -756,7 +758,6 @@ header.scrolled {
 
         .hero-slider-engine {
             margin: 0;
-            padding: 45px;
             position: relative;
             overflow: hidden;
             left: 100px;

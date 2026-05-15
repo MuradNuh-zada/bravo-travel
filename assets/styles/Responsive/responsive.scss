@@ -107,6 +107,66 @@
     .burger-menu {
         display: block;
     }
+
+    #carousel {
+        .hero-carousel-main {
+            #hero-title-box {
+                top: 110px;
+                left: -90px;
+                .hero-title-text {
+                    font-size: 55px;
+                }
+            }
+            .hero-slider-engine {
+                padding: 0;
+                top: 80px;
+                left: 0;
+            }
+            .hero-item-card {
+                height: 280px;
+                width: 150px;
+                &.swiper-slide-active {
+                    transition: transform 0.3s ease;
+                    .hero-overlay {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+        #infos {
+            margin-top: 25px;
+        }
+    }
+
+    .card {
+        h3,
+        h4 {
+            font-size: 15px;
+        }
+        .card-footer {
+            margin-block: 16px 0;
+        }
+    }
+
+    .cards-head {
+        margin-bottom: 30px;
+    }
+    .grid-cards {
+        grid-auto-rows: 153px;
+    }
+    .tour-info {
+        bottom: 15px;
+    }
+
+    .tours-carousel {
+        padding-inline: 100px;
+    }
+    .card-prev {
+        left: 7%;
+    }
+    .card-next {
+        right: 7%;
+    }
 }
 
 @media only screen and (max-width: 992px) {
