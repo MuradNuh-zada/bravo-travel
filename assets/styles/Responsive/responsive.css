@@ -98,4 +98,54 @@
   .burger-menu {
     display: block;
   }
+  #carousel .hero-carousel-main #hero-title-box {
+    top: 110px;
+    left: -90px;
+  }
+  #carousel .hero-carousel-main #hero-title-box .hero-title-text {
+    font-size: 55px;
+  }
+  #carousel .hero-carousel-main .hero-slider-engine {
+    padding: 0;
+    top: 80px;
+    left: 0;
+  }
+  #carousel .hero-carousel-main .hero-item-card {
+    height: 280px;
+    width: 150px;
+  }
+  #carousel .hero-carousel-main .hero-item-card.swiper-slide-active {
+    transition: transform 0.3s ease;
+  }
+  #carousel .hero-carousel-main .hero-item-card.swiper-slide-active .hero-overlay {
+    display: none !important;
+  }
+  #carousel #infos {
+    margin-top: 25px;
+  }
+  .card h3,
+  .card h4 {
+    font-size: 15px;
+  }
+  .card .card-footer {
+    margin-block: 16px 0;
+  }
+  .cards-head {
+    margin-bottom: 30px;
+  }
+  .grid-cards {
+    grid-auto-rows: 153px;
+  }
+  .tour-info {
+    bottom: 15px;
+  }
+  .tours-carousel {
+    padding-inline: 100px;
+  }
+  .card-prev {
+    left: 7%;
+  }
+  .card-next {
+    right: 7%;
+  }
 }/*# sourceMappingURL=responsive.css.map */

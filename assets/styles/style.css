@@ -421,7 +421,7 @@ header.scrolled nav {
   justify-content: space-between;
 }
 .new-cards .card {
-  width: 260px;
+  flex: 0 0 23%;
 }
 
 .card {
@@ -476,7 +476,7 @@ header.scrolled nav {
 
 .tours-carousel {
   position: relative;
-  padding-inline: 130px;
+  padding-inline: 150px;
 }
 
 .cards-carousel {
@@ -499,13 +499,13 @@ header.scrolled nav {
 }
 
 .card-prev {
-  left: 8%;
+  left: 10%;
   position: absolute;
   top: 40%;
 }
 
 .card-next {
-  right: 8%;
+  right: 10%;
   position: absolute;
   z-index: 999;
   top: 40%;
@@ -650,6 +650,9 @@ header.scrolled nav {
   justify-content: space-between;
   margin-bottom: 30px;
 }
+.form-container .form-head h3 {
+  font-weight: 500;
+}
 .form-container form {
   position: relative;
   z-index: 15;
@@ -747,46 +750,48 @@ header.scrolled nav {
   }
 }
 #carousel {
-  height: 100vh;
+  width: 100%;
+  aspect-ratio: 21/10;
   position: relative;
   overflow: hidden;
 }
-#carousel .bg-img-item {
-  position: absolute;
+#carousel .swiper-content-my,
+#carousel .swiper,
+#carousel .swiper-wrapper,
+#carousel .swiper-slide {
   width: 100%;
   height: 100%;
-}
-#carousel .bg-images {
-  display: flex;
+  position: relative;
 }
 #carousel .bg-layer {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -5;
 }
 #carousel .bg-baku {
   position: absolute;
+  width: clamp(300px, 45vw, 900px);
   top: 25%;
+  left: 20%;
+  transform: translateX(-45%);
   width: 45%;
+  height: auto;
   z-index: -3;
 }
 #carousel .bg-fly {
   position: absolute;
+  width: clamp(120px, 18vw, 350px);
   top: 16%;
+  left: 10%;
+  height: auto;
   z-index: -1;
-  width: auto;
 }
 #carousel .bg-fly.flying {
   animation: fly 4s ease-in-out;
-}
-#carousel .swiper-content-my {
-  width: 100%;
-  height: 100%;
-}
-#carousel .swiper-content-my .swiper {
-  width: 100%;
-  height: 100%;
 }
 #carousel .hero-carousel-main {
   display: flex;
@@ -800,7 +805,9 @@ header.scrolled nav {
   z-index: 10;
 }
 #carousel .hero-carousel-main #hero-title-box {
-  width: 40%;
+  position: relative;
+  top: 130px;
+  left: -70px;
 }
 #carousel .hero-carousel-main #hero-title-box .hero-title-text {
   text-transform: uppercase;
@@ -816,13 +823,12 @@ header.scrolled nav {
 }
 #carousel .hero-carousel-main .hero-slider-engine {
   margin: 0;
-  width: 50%;
-  padding: 45px;
   position: relative;
   overflow: hidden;
+  left: 100px;
 }
 #carousel .hero-carousel-main .hero-item-card.swiper-slide-active {
-  height: 370px;
+  transition: height 0.3s ease;
 }
 #carousel .hero-carousel-main .hero-item-card.swiper-slide-active .hero-overlay {
   display: none !important;
@@ -881,13 +887,17 @@ header.scrolled nav {
   font-size: 15px;
   line-height: 20px;
 }
+#carousel .hero-carousel-main .dots-container {
+  position: relative;
+  z-index: 20;
+  transform: rotate(90deg);
+  width: 25%;
+  left: -45px;
+  top: 20px;
+}
 #carousel .hero-carousel-main .hero-dots-container {
   display: flex;
-  transform: rotate(90deg);
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  z-index: 20;
+  height: 100%;
 }
 #carousel .hero-carousel-main .hero-dots-container .swiper-pagination-bullet {
   opacity: 1;
@@ -897,20 +907,22 @@ header.scrolled nav {
 }
 #carousel .hero-carousel-main .hero-dots-container .dot-parent {
   position: relative;
-  margin-right: 35px;
+  margin-left: 30px;
+  width: 8px;
+  height: 8px;
 }
 #carousel .hero-carousel-main .hero-dots-container .dot-parent .dot {
   display: block;
   background-color: #1e419b;
-  width: 8px;
-  height: 8px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 #carousel .hero-carousel-main .hero-dots-container .dot-parent:after {
   content: "";
   position: absolute;
   top: 40%;
-  width: 45px;
+  width: 40px;
   height: 1.5px;
   background-color: #1e419b;
   left: 10px;
