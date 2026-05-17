@@ -148,13 +148,30 @@ function handleScroll() {
 
 // ! Cards carousel
 const swiper = new Swiper(".cards-carousel", {
-  slidesPerView: 3,
-  spaceBetween: 30,
   loop: true,
 
   navigation: {
     nextEl: ".card-next",
     prevEl: ".card-prev",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
   },
 });
 
@@ -180,25 +197,25 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
   },
 
   breakpoints: {
-    992: {
-      slidesPerView: 1,
-      spaceBetween: 140,
-    },
-    1170: {
-      slidesPerView: 1,
-      spaceBetween: 60,
-    },
-    1200: {
-      slidesPerView: 2,
+    768: {
+      slidesPerView: "auto",
       spaceBetween: 120,
     },
+    1170: {
+      slidesPerView: 2,
+      spaceBetween: 80,
+    },
+    1200: {
+      slidesPerView: "auto",
+      spaceBetween: 80,
+    },
     1300: {
-      slidesPerView: 3,
-      spaceBetween: 50,
+      slidesPerView: "auto",
+      spaceBetween: 40,
     },
     1440: {
       slidesPerView: 3,
-      spaceBetween: 130,
+      spaceBetween: 80,
     },
   },
   on: {

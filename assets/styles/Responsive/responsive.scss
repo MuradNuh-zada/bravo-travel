@@ -1,3 +1,27 @@
+@import "../import";
+
+@media only screen and (max-width: 1440px) {
+    #carousel {
+        .hero-carousel-main {
+            .hero-slider-engine {
+                padding: 0;
+                left: 80px;
+            }
+            .hero-item-card {
+                &.swiper-slide-active {
+                    transition: transform 0.3s ease;
+                    .hero-overlay {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+        #infos {
+            margin-top: 40px;
+        }
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -112,19 +136,18 @@
         .hero-carousel-main {
             #hero-title-box {
                 top: 110px;
-                left: -90px;
+                left: -100px;
                 .hero-title-text {
                     font-size: 55px;
                 }
             }
             .hero-slider-engine {
                 padding: 0;
-                top: 80px;
+                top: 90px;
                 left: 0;
             }
             .hero-item-card {
                 height: 280px;
-                width: 150px;
                 &.swiper-slide-active {
                     transition: transform 0.3s ease;
                     .hero-overlay {
@@ -134,7 +157,7 @@
             }
         }
         #infos {
-            margin-top: 25px;
+            margin-top: 20px;
         }
     }
 
@@ -170,12 +193,249 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    #carousel {
+        .hero-carousel-main {
+            #hero-title-box {
+                top: 70px;
+                left: -120px;
+            }
+            .hero-slider-engine {
+                left: 30px;
+                top: 80px;
+            }
+            .hero-item-card {
+                height: 210px !important;
+            }
+        }
+        #infos {
+            margin-top: 5px;
+            .info {
+                width: 50px;
+                height: 50px;
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .tours-carousel {
+        padding-inline: 80px;
+    }
+
+    .new-cards {
+        .card {
+            flex: 0 0 31%;
+        }
+    }
+
+    .grid-cards {
+        grid-auto-rows: 110px;
+    }
+    .tour-info {
+        p {
+            display: none;
+        }
+    }
+
+    // ? Form
+    .form-container {
+        width: 70%;
+        .inputs-row {
+            display: block;
+            input {
+                width: 100%;
+                &:first-child {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .submit-btn {
+            display: flex;
+            justify-self: center;
+        }
+        .cloud-bottomleft {
+            display: none;
+        }
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    #carousel {
+        aspect-ratio: 21 / 14;
+
+        .hero-carousel-main {
+            .hero-slider-engine {
+                left: -60px;
+                top: 80px;
+            }
+            #hero-title-box {
+                position: relative;
+                top: 80px;
+                left: -140px;
+            }
+            .dots-container {
+                width: 32%;
+                left: -70px;
+            }
+        }
+    }
+
+    .tours-carousel {
+        padding-inline: 15px;
+    }
+
+    .card-prev {
+        left: -20px;
+    }
+    .card-next {
+        right: -20px;
+    }
+
+    .new-cards {
+        .card {
+            flex: 0 0 48%;
+        }
+    }
+
+    .grid-cards {
+        grid-template-columns: repeat(3, 1fr);
+        .card-grid {
+            &:first-child {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    }
+
+    // ? Form
+    .form-div {
+        left: 0;
+    }
+    .form-container {
+        width: 100%;
+        .lady {
+            display: none;
+        }
+    }
+
+    .first {
+        .info-item {
+            gap: 25px;
+            flex-direction: column;
+        }
+    }
+
+    .second {
+        .info {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .info-item {
+            justify-content: center;
+        }
+    }
+
+    .header-list {
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+    #carousel {
+        aspect-ratio: 21 / 17;
+
+        .hero-carousel-main {
+            .dots-container {
+                display: none;
+            }
+            .hero-slider-engine {
+                left: -60px;
+                top: 80px;
+            }
+            .hero-item-card {
+                .hero-info-content {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+            #hero-title-box {
+                position: relative;
+                top: 60px;
+                left: 15px;
+                .hero-title-text {
+                    font-size: 32px;
+                }
+                .hero-desc-text {
+                    font-size: 15px;
+                }
+            }
+            .dots-container {
+                width: 32%;
+                left: -70px;
+            }
+        }
+        #infos {
+            gap: 8px;
+            margin-top: 20px;
+            .info {
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+            }
+            i {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .new-cards {
+        justify-content: center;
+        .card {
+            flex: 0 0 90%;
+        }
+    }
+    .grid-cards {
+        grid-auto-rows: 150px;
+        grid-template-columns: repeat(2, 1fr);
+        .card-grid {
+            &:first-child {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    }
+
+    .form-container {
+        padding: 30px 50px 50px;
+    }
+    .first {
+        .info {
+            flex-direction: column;
+            gap: 40px;
+        }
+        .info-item {
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            &:last-child {
+                justify-content: center;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
