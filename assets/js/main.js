@@ -197,9 +197,17 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
   },
 
   breakpoints: {
+    100: {
+      slidesPerView: "auto",
+      spaceBetween: 90,
+    },
+    576: {
+      slidesPerView: "auto",
+      spaceBetween: 90,
+    },
     768: {
       slidesPerView: "auto",
-      spaceBetween: 120,
+      spaceBetween: 250,
     },
     1170: {
       slidesPerView: 2,
@@ -214,8 +222,8 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
       spaceBetween: 40,
     },
     1440: {
-      slidesPerView: 3,
-      spaceBetween: 80,
+      slidesPerView: "auto",
+      spaceBetween: 50,
     },
   },
   on: {
