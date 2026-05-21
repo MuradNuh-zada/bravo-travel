@@ -67,7 +67,8 @@ h6 {
 @media only screen and (max-width: 1440px) {
   #carousel .hero-carousel-main .hero-slider-engine {
     padding: 0;
-    left: 140px;
+    left: 30px;
+    top: 50px;
   }
   #carousel .hero-carousel-main .hero-item-card.swiper-slide-active {
     transition: transform 0.3s ease;
@@ -296,6 +297,12 @@ h6 {
   }
   .form-container .cloud-bottomleft {
     display: none;
+  }
+  footer {
+    margin-bottom: 53px;
+  }
+  #wp-message {
+    display: block;
   }
 }
 @media only screen and (max-width: 768px) {

@@ -5,7 +5,8 @@
         .hero-carousel-main {
             .hero-slider-engine {
                 padding: 0;
-                left: 140px;
+                left: 30px;
+                top: 50px;
             }
             .hero-item-card {
                 &.swiper-slide-active {
@@ -272,6 +273,13 @@
         .cloud-bottomleft {
             display: none;
         }
+    }
+
+    footer {
+        margin-bottom: 53px;
+    }
+    #wp-message {
+        display: block;
     }
 }
 
