@@ -223,7 +223,7 @@ const uniqueHeroSwiper = new Swiper(".hero-slider-engine", {
     },
     1440: {
       slidesPerView: "auto",
-      spaceBetween: 50,
+      spaceBetween: 130,
     },
   },
   on: {

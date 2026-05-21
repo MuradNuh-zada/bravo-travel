@@ -825,7 +825,7 @@ header.scrolled nav {
   margin: 0;
   position: relative;
   overflow: hidden;
-  left: 190px;
+  left: 120px;
 }
 #carousel .hero-carousel-main .hero-item-card.swiper-slide-active {
   transition: height 0.3s ease;
@@ -1123,4 +1123,19 @@ footer .info-item:nth-child(2) {
 }
 .second .social-link:hover {
   background-color: #f58220;
+}
+
+#wp-message {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: none;
+  text-align: center;
+  background-color: #0dc143;
+  color: #fff;
+  padding: 18px 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 994;
 }/*# sourceMappingURL=style.css.map */
