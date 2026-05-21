@@ -749,16 +749,15 @@ header.scrolled {
                 font-size: 22px;
                 text-transform: uppercase;
                 color: #000;
+                width: max-content;
             }
         }
 
         .hero-slider-engine {
-            width: 35%;
             margin: 0;
             position: relative;
             overflow: hidden;
-            left: 150px;
-            top: 45px;
+            left: 190px;
         }
         .hero-item-card {
             &.swiper-slide-active {
@@ -831,7 +830,7 @@ header.scrolled {
             position: relative;
             z-index: 20;
             transform: rotate(90deg);
-            width: 25%;
+            // width: 25%;
             left: -45px;
             top: 20px;
         }

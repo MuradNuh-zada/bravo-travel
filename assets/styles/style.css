@@ -818,14 +818,14 @@ header.scrolled nav {
   font-size: 22px;
   text-transform: uppercase;
   color: #000;
+  width: -moz-max-content;
+  width: max-content;
 }
 #carousel .hero-carousel-main .hero-slider-engine {
-  width: 35%;
   margin: 0;
   position: relative;
   overflow: hidden;
-  left: 150px;
-  top: 45px;
+  left: 190px;
 }
 #carousel .hero-carousel-main .hero-item-card.swiper-slide-active {
   transition: height 0.3s ease;
@@ -891,7 +891,6 @@ header.scrolled nav {
   position: relative;
   z-index: 20;
   transform: rotate(90deg);
-  width: 25%;
   left: -45px;
   top: 20px;
 }

@@ -67,7 +67,7 @@ h6 {
 @media only screen and (max-width: 1440px) {
   #carousel .hero-carousel-main .hero-slider-engine {
     padding: 0;
-    left: 80px;
+    left: 140px;
   }
   #carousel .hero-carousel-main .hero-item-card.swiper-slide-active {
     transition: transform 0.3s ease;
@@ -233,16 +233,20 @@ h6 {
   .container {
     max-width: 720px;
   }
+  #carousel {
+    aspect-ratio: 21/12;
+  }
   #carousel .hero-carousel-main #hero-title-box {
     top: 70px;
     left: -120px;
   }
   #carousel .hero-carousel-main .hero-slider-engine {
-    left: 30px;
+    left: -30px;
     top: 80px;
   }
   #carousel .hero-carousel-main .hero-item-card {
     height: 210px !important;
+    width: 210px;
   }
   #carousel #infos {
     margin-top: 5px;
@@ -253,6 +257,14 @@ h6 {
   }
   #carousel #infos .info p {
     display: none;
+  }
+  #carousel #infos .info i {
+    font-size: 17px;
+  }
+  #carousel .bg-baku {
+    top: 28%;
+    left: 20%;
+    width: 45%;
   }
   .tours-carousel {
     padding-inline: 80px;
@@ -305,6 +317,12 @@ h6 {
   #carousel .hero-carousel-main .dots-container {
     width: 32%;
     left: -70px;
+  }
+  #carousel .hero-carousel-main .hero-item-card {
+    width: 160px;
+  }
+  #carousel .hero-carousel-main .hero-item-card .hero-info-content {
+    padding: 0 5px 0 15px;
   }
   .tours-carousel {
     padding-inline: 15px;
@@ -360,7 +378,7 @@ h6 {
     display: none;
   }
   #carousel .hero-carousel-main .hero-slider-engine {
-    left: -60px;
+    left: 90px;
     top: 80px;
   }
   #carousel .hero-carousel-main .hero-item-card .hero-info-content p {
@@ -369,39 +387,50 @@ h6 {
   #carousel .hero-carousel-main #hero-title-box {
     position: relative;
     top: 60px;
-    left: 15px;
+    left: 30px;
   }
   #carousel .hero-carousel-main #hero-title-box .hero-title-text {
-    font-size: 32px;
-  }
-  #carousel .hero-carousel-main #hero-title-box .hero-desc-text {
-    font-size: 15px;
+    font-size: 42px;
   }
   #carousel .hero-carousel-main .dots-container {
     width: 32%;
     left: -70px;
   }
+  #carousel .hero-carousel-main .hero-item-card {
+    width: 140px;
+  }
+  #carousel .hero-carousel-main .hero-item-card .hero-info-content h3 {
+    font-size: 18px;
+  }
   #carousel #infos {
-    gap: 8px;
+    gap: 15px;
     margin-top: 20px;
   }
   #carousel #infos .info {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
+    width: 40px;
+    height: 40px;
   }
   #carousel #infos i {
     font-size: 12px;
+  }
+  .cards-carousel {
+    width: 85%;
+  }
+  .card-prev {
+    left: 15px;
+  }
+  .card-next {
+    right: 15px;
   }
   .new-cards {
     justify-content: center;
   }
   .new-cards .card {
-    flex: 0 0 90%;
+    flex: 0 0 75%;
   }
   .grid-cards {
-    grid-auto-rows: 150px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 124px;
+    grid-template-columns: repeat(3, 1fr);
   }
   .grid-cards .card-grid:first-child {
     grid-column: span 1;
