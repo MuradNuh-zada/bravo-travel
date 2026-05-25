@@ -1,3 +1,4 @@
+// ! Set head slider tours cards
 const destinationHeadSlider = [
   {
     id: 1,
@@ -30,11 +31,9 @@ const destinationHeadSlider = [
     image: "https://bravotravel.az/img/maldiv_releated1.jpg",
   },
 ];
-
 const swiperWrapper = document.querySelector(
   ".hero-slider-engine .swiper-wrapper",
 );
-
 swiperWrapper.innerHTML = destinationHeadSlider
   .map(
     (item) => `
@@ -47,6 +46,103 @@ swiperWrapper.innerHTML = destinationHeadSlider
         </div>
     </div>
 `,
+  )
+  .join("");
+
+function setElementsWithCount(array, count) {
+  for (let i = 1; i <= count; i++) {
+    array.push({
+      id: i,
+      city: "Tbilisi",
+      time: "18.09.2022 - 23.09.2022",
+      price: "2453$ - 2345$",
+      imageSrc:
+        "https://bravotravel.az/uploads/posts/2022-08/medium/1661868740_2022-08-30-18.08.16.jpg",
+    });
+  }
+}
+// ! Set hot tours cards
+const hotToursElforSlider = [];
+setElementsWithCount(hotToursElforSlider, 5);
+const hotTourCardsParent = document.querySelector(".tours-carousel .cards");
+hotTourCardsParent.innerHTML = hotToursElforSlider
+  .map(
+    (element) => `<div class="card swiper-slide">
+      <img
+          src="${element.imageSrc}" alt="${element.city}"
+      />
+        <div class="card-info">
+          <h3>${element.city}</h3>
+          <h4>${element.time}</h4>
+          <div class="card-footer">
+            <p>${element.price}</p>
+            <span>Ətraflı</span>
+          </div>
+        </div>
+  </div>`,
+  )
+  .join("");
+
+// ! Set new tours cards
+const newToursElements = [];
+setElementsWithCount(newToursElements, 12);
+const newTourCardsParent = document.querySelector("#new-tours .new-cards");
+newTourCardsParent.innerHTML = newToursElements
+  .map(
+    (element) => `<article class="card">
+          <img
+            src="${element.imageSrc}"
+            alt="${element.city}"
+          />
+          <div class="card-info">
+            <h3>${element.city}</h3>
+            <h4>${element.time}</h4>
+            <div class="card-footer">
+              <p>${element.price} AZN</p>
+              <span>Ətraflı</span>
+            </div>
+          </div>
+      </article>`,
+  )
+  .join("");
+
+// ! Set country tours cards
+const countryToursElements = [];
+let countForCountryTours = 10;
+if (countForCountryTours > 10) {
+  console.error(
+    "Count cannot be greater than 10 because it breaks the design.",
+  );
+  countForCountryTours = 10;
+}
+for (let i = 1; i <= countForCountryTours; i++) {
+  countryToursElements.push({
+    id: i,
+    city: "Maldiv",
+    desc: "Bir yerüzü cənnəti",
+    imageSrc:
+      "https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/11/IMG_5764.jpg?resize=1000%2C1500&ssl=1",
+  });
+}
+
+const countryToursCardsParent = document.querySelector(
+  "#country-tours .grid-cards",
+);
+countryToursCardsParent.innerHTML = countryToursElements
+  .map(
+    (element) => `<div class="card-grid" data-id=${element.id}>
+  <a href="#">
+    <img
+      src="${element.imageSrc}"
+      alt="${element.city}"
+    />
+    <div class="overlay"></div>
+    <div class="tour-info">
+      <h3>${element.city}</h3>
+      <p>${element.desc}</p>
+    </div>
+  </a>
+</div>`,
   )
   .join("");
 
