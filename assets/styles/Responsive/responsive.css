@@ -304,6 +304,14 @@ h6 {
   #wp-message {
     display: block;
   }
+  .detail-info {
+    align-items: center;
+    flex-direction: column;
+  }
+  .detail-info .banner,
+  .detail-info .detail-text {
+    width: 65%;
+  }
 }
 @media only screen and (max-width: 768px) {
   .container {
